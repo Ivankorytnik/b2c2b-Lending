@@ -1,0 +1,13 @@
+{
+  "name": "atom-taxi-owner-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static ATOM taxi owner landing served for deployment",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
