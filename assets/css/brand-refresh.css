@@ -1,0 +1,222 @@
+/* ATOM taxi owner — graphic refresh. Brand-inspired concept; not a copied closed ChatGPT Site. */
+:root{
+ --ink:#111618;--muted:#5b6568;--tint:#f3f5f4;--accent:#17dfd2;--accent-dark:#009e96;
+ --line:#d9e1e0;--container:1240px;--radius:28px;--night:#070b0e;--night2:#0d1619;
+}
+html{scroll-padding-top:90px}
+body{font-family:Inter,"Segoe UI",Arial,sans-serif;color:#121a1b;background:#fff;font-size:15px}
+::selection{background:#08d5c3;color:#061012}
+.container{width:min(calc(100% - 64px),var(--container))}
+.site-header{background:#080d10!important;border:0!important;position:sticky;top:0;z-index:50;box-shadow:none!important}
+.site-header .header-row{min-height:78px}
+.site-header .logo{font-size:27px;font-weight:800;letter-spacing:.025em;color:#fff;gap:11px}
+.site-header .logo small{color:#a5b5b7;letter-spacing:.01em;font-size:11px;margin-left:3px;font-weight:500}
+.logo-mark{border-radius:50%;background:#08d9c9;width:38px;height:38px;box-shadow:0 0 18px rgba(15,220,206,.2);position:relative}
+.logo-mark::after{background:#061214;border:0;box-shadow:none;width:16px;height:16px;border-radius:50%;position:absolute;top:11px;left:11px}
+.site-header .nav-links{gap:29px}
+.site-header .nav-links a{color:#c6d4d4;text-transform:uppercase;letter-spacing:.05em;font-size:11px;font-weight:690;transition:color .2s}
+.site-header .nav-links a:hover{color:#22ecdb}
+.site-header .header-cta{background:#1de2d1;border:1px solid #1de2d1;color:#061415;font-size:12px;letter-spacing:.02em;font-weight:800;border-radius:9px;padding:14px 18px;transition:background .2s,transform .2s}
+.site-header .header-cta:hover{background:#fff;color:#061415;transform:translateY(-1px)}
+.btn{border-radius:12px;min-height:50px;font-weight:790;letter-spacing:-.015em}
+.btn-primary{background:#14dcca;color:#071313}
+.btn-primary:hover{background:#43f4e6;color:#061113}
+.btn-dark{background:#101819;color:#fff}
+.btn-dark:hover{background:#263334}
+.btn-quiet{background:#eff5f4}
+:focus-visible{outline:3px solid #29efdf;outline-offset:3px}
+.tech-hero{background:#080e10!important;position:relative;isolation:isolate;color:#fff;overflow:hidden}
+.tech-hero::before{content:"";position:absolute;z-index:-1;inset:-30% -10% -20% 30%;width:80%;background:radial-gradient(ellipse at 56% 38%,rgba(3,164,164,.21),transparent 57%);pointer-events:none}
+.tech-hero::after{content:"ATOM  /  MOBILITY";position:absolute;bottom:15px;right:2%;font-size:10px;font-weight:650;letter-spacing:.24em;color:#3d5458;pointer-events:none}
+.tech-hero .hero-grid{
+ display:grid!important;grid-template-columns:minmax(0,1fr) minmax(330px,415px)!important;
+ grid-template-rows:auto 1fr!important;grid-template-areas:"copy form" "visual form"!important;
+ align-items:start!important;gap:0 57px!important;padding-top:55px;padding-bottom:53px!important
+}
+.tech-hero .hero-copy{grid-area:copy;display:block!important;position:relative;z-index:1}
+.tech-hero .hero-copy .eyebrow{display:inline-flex!important;grid-area:auto!important;grid-row:auto!important;color:#63e8df;letter-spacing:.18em;font-size:11px;font-weight:750;text-transform:uppercase}
+.tech-hero .hero-copy .eyebrow::before{width:7px;height:7px;background:#23e5d5}
+.tech-hero .hero-copy h1{display:block!important;grid-row:auto!important;max-width:760px;font-size:clamp(48px,5.2vw,79px);line-height:.99;letter-spacing:-.075em;color:#fff;margin:22px 0!important;font-weight:780}
+.tech-hero .hero-copy h1 em{font-style:normal;color:#13dece}
+.tech-hero .hero-copy h1 span{color:#8dacae}
+.tech-hero .hero-intro{grid-row:auto!important;max-width:610px;font-size:17px;line-height:1.62;color:#b9c7c8;letter-spacing:-.01em}
+.tech-hero .benefits{grid-row:auto!important;display:flex;gap:9px;margin:21px 0 0}
+.tech-hero .benefit{background:rgba(255,255,255,.075);border:1px solid #314246;color:#d6e6e6;border-radius:9px;font-size:11px;font-weight:580;padding:10px 11px;max-width:100%}
+.tech-hero .benefit svg{color:#21decf}
+.tech-hero .car-illustration{grid-area:visual!important;margin:12px 0 0!important;max-width:none!important;overflow:hidden;border-radius:24px;border:1px solid #253438;background:#123036;box-shadow:0 26px 70px rgba(0,0,0,.25);position:relative}
+.tech-hero .car-illustration::before{content:"ЭЛЕКТРОМОБИЛЬ • АТОМ";position:absolute;z-index:1;top:18px;left:20px;font-size:10px;letter-spacing:.14em;background:#071819bd;color:#f3ffff;border:1px solid #87ffff52;padding:10px 12px;border-radius:999px;font-weight:700}
+.tech-hero .car-photo{width:100%;height:clamp(235px,23vw,326px);aspect-ratio:auto!important;object-fit:cover;object-position:50% 58%;display:block;filter:saturate(1.11) contrast(1.02)}
+.tech-hero .car-note{grid-area:visual!important;display:none}
+.tech-hero .lead-card{grid-area:form!important;align-self:start;z-index:2;background:#fff;color:#111a1b;border:1px solid #e4eeee;border-top:0;border-radius:27px;padding:30px 29px 27px;box-shadow:0 24px 80px rgba(0,0,0,.34);margin:0!important;position:relative;overflow:hidden}
+.tech-hero .lead-card::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,#09d6cd,#8affea)}
+.tech-hero .lead-card-kicker{font-size:10px;letter-spacing:.16em;color:#008b83;font-weight:800}
+.tech-hero .lead-card h2{font-size:31px;line-height:1.08;letter-spacing:-.055em;margin:10px 0 12px}
+.tech-hero .lead-card p.sub{font-size:13px;line-height:1.55;color:#657073;margin-bottom:25px}
+.tech-hero .lead-card .field{gap:7px}
+.tech-hero .lead-card .field label{font-size:12px;font-weight:700}
+.tech-hero .lead-card .field input{border:1px solid #cad5d5;background:#f8fbfa;border-radius:12px;min-height:53px;font-size:15px}
+.tech-hero .lead-card .field input:focus{background:#fff;border-color:#0fbaae;box-shadow:0 0 0 3px rgba(16,213,198,.15)}
+.tech-hero .lead-card .form-grid{gap:14px}
+.tech-hero .lead-card .checkbox-row input,.bottom-grid .lead-card .checkbox-row input{accent-color:#01aca3}
+.tech-hero .lead-card .checkbox-row label{color:#5f686a;font-size:11px}
+.tech-hero .lead-card .btn-primary{background:#101b1d;color:#fff;border-radius:12px;min-height:56px}
+.tech-hero .lead-card .btn-primary:hover{background:#007f77}
+.tech-hero .lead-card .form-fine{font-size:10px;color:#818d90}
+.hero-ticker{background:#111d20;color:#fff;border-top:1px solid #253538;border-bottom:1px solid #253538}
+.hero-ticker .ticker-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;padding:21px 0}
+.hero-ticker .ticker-cell{display:flex;align-items:center;gap:13px;border-right:1px solid #314044;padding-right:20px}
+.hero-ticker .ticker-cell:last-child{border-right:0}
+.hero-ticker strong{font-size:31px;font-weight:790;letter-spacing:-.065em;color:#24e0d4;line-height:1}
+.hero-ticker small{font-size:11px;color:#b6c4c5;line-height:1.35;max-width:160px}
+.content-section{position:relative}
+section.content-section{padding:96px 0}
+.section-heading{margin-bottom:35px;gap:35px}
+.section-heading .eyebrow,.editorial-grid .eyebrow{font-size:10px;color:#008f87;letter-spacing:.16em;text-transform:uppercase}
+.section-heading .eyebrow:before,.editorial-grid .eyebrow:before{background:#10c7bd}
+.section-heading h2{font-size:clamp(36px,4.1vw,59px);line-height:1.05;letter-spacing:-.065em;max-width:790px}
+.section-heading p{font-size:14px;line-height:1.7;max-width:345px;color:#687578}
+#for-whom{background:#f5f7f7}
+#for-whom .cards-3{gap:18px}
+.scenario-card{min-height:272px;background:#fff;border:1px solid #dce5e4;border-radius:25px;padding:32px;box-shadow:0 12px 37px rgba(8,26,29,.03);transition:transform .2s,border-color .2s,box-shadow .2s}
+.scenario-card:hover{transform:translateY(-4px);border-color:#8edbd6;box-shadow:0 20px 45px rgba(10,30,30,.09)}
+.scenario-card.active{border:2px solid #11cfc3;background:#f4ffff}
+.scenario-card .num{font-size:10px;color:#0a9a90;letter-spacing:.12em}
+.scenario-card h3{font-size:26px;margin:27px 0 11px;line-height:1.15;letter-spacing:-.05em}
+.scenario-card p{font-size:14px;line-height:1.65;color:#667174}
+.scenario-card button{font-size:13px;color:#007f79;font-weight:800}
+#benefits{background:linear-gradient(140deg,#0b1417,#050a0c)!important;color:#fff}
+#benefits .section-heading h2{color:#fff}
+#benefits .section-heading p{color:#a6b8b9}
+#benefits .section-heading .eyebrow{color:#3fede0}
+#benefits .feature-card{border:1px solid #29393d;background:linear-gradient(155deg,#142226,#0b1416);border-radius:24px;padding:29px;min-height:220px;transition:border-color .2s,transform .2s}
+#benefits .feature-card:hover{transform:translateY(-3px);border-color:#15b4ab}
+#benefits .feature-icon{background:rgba(17,206,196,.14);color:#2ef4e3;border:1px solid rgba(46,244,227,.17);border-radius:14px;font-size:23px}
+#benefits .feature-card h3{color:#fff;font-size:20px}
+#benefits .feature-card p{color:#9fb2b5;font-size:13px}
+#purchase{background:#f6f9f8}
+#purchase .calc-surface,#compare .calc-surface{border-radius:27px;border:1px solid #dbe6e4;box-shadow:0 18px 50px rgba(4,26,27,.04)}
+#purchase .calc-summary{background:#0b1c1e;border:1px solid #1e4f4d;border-radius:27px}
+#purchase .calc-summary .hero-metric strong{color:#37e5da}
+#purchase .calc-summary .metric{background:#193134}
+#purchase .calc-summary .btn-primary{background:#20e2d5;color:#061d1b}
+#compare{background:#edf3f2!important}
+#compare .calc-surface{background:#fff}
+#compare .compare-summary{background:#eaf5f4;border:1px solid #c9e7e3}
+#compare .compare-column{background:#fff;border:1px solid #c7e2de}
+#compare .compare-outcome{color:#043835}
+#energy{background:#fff!important}
+#energy .calculator-card{border-radius:28px;padding:34px;box-shadow:0 20px 56px rgba(10,25,30,.05)}
+#energy .calc-result{background:#071d21;border-radius:23px}
+#energy .calc-result .calc-value{color:#24e0d4}
+#energy .bar-fill.electric{background:#17dfd2}
+#energy .calc-result .btn-primary{background:#20e2d5;color:#081718}
+#legal{background:#0a1215;color:#fff}
+#legal .section-heading h2{color:#fff}
+#legal .section-heading p{color:#abbec1}
+#legal .section-heading .eyebrow{color:#30e3da}
+#legal .legal-step{border:1px solid #334346;background:#132125;border-radius:23px;padding:29px}
+#legal .legal-step h3{color:#fff}
+#legal .legal-step p{color:#a2b6b8}
+#legal .legal-step span{color:#3aeada}
+#legal .tag{background:#16282b;border-color:#334c4e;color:#c3e4e5}
+#taxi-car{background:#f3f7f6!important}
+#taxi-car .editorial-grid h2{font-size:clamp(35px,4.5vw,62px)}
+#taxi-car .editorial-grid img{border-radius:26px;box-shadow:0 24px 50px #0615191c}
+#taxi-car .spec-row strong{color:#077e7b}
+#charging{background:#fff}
+.service-grid{gap:18px}
+.service-card{border:1px solid #dce7e5;border-radius:24px;padding:28px;box-shadow:0 10px 25px #0d24250a}
+.service-card h3{font-size:23px;letter-spacing:-.05em}
+.service-card p{font-size:14px}
+.service-card a{color:#007e77}
+#how-to{background:#f6f8f7}
+#how-to .step{background:#fff;border:1px solid #e0e8e6;border-radius:22px;padding:29px}
+#how-to .step b{color:#0db9af}
+#how-to .step h3{font-size:20px}
+#faq{background:#fff}
+#faq .faq summary{font-size:18px;letter-spacing:-.025em}
+#faq .faq summary::after{color:#029d95}
+#request{background:radial-gradient(ellipse at 0 100%,rgba(5,148,144,.22),transparent 55%),#081113;color:#fff}
+#request .bottom-grid h2{font-size:clamp(43px,5vw,76px);letter-spacing:-.07em}
+#request .eyebrow{color:#43ecde}
+#request .eyebrow:before{background:#0ecfc3}
+#request .tag{background:#162c2d!important;border-color:#2e4949!important;color:#d8fafa!important}
+#request .lead-card{border:0;border-top:5px solid #15d4c7;border-radius:27px;padding:33px}
+#request .lead-card h2{font-size:29px;letter-spacing:-.05em}
+#request .lead-card .btn-primary{background:#12d9cb;color:#072120;min-height:56px}
+#request .lead-card .field input{background:#f7faf9;border-color:#d8e3e1;min-height:52px}
+.site-footer{background:#050b0d;border:0;color:#fff;padding:39px 0}
+.site-footer .logo{color:#fff}
+.site-footer .footer-links a{color:#51e0d8}
+.site-footer .footer-note{color:#849698}
+.site-footer .footer-note p{font-size:11px;line-height:1.6}
+.mobile-sticky{background:rgba(5,13,15,.96)!important;border-color:#193536!important}
+.mobile-sticky .btn-primary{background:#23e6d9;color:#051717}
+@media(max-width:1130px){
+ .tech-hero .hero-grid{gap:0 30px!important;grid-template-columns:minmax(0,1fr) minmax(340px,395px)!important}
+ .tech-hero .hero-copy h1{font-size:clamp(48px,5.1vw,68px)}
+ .tech-hero .hero-intro{font-size:16px}
+ .site-header .nav-links{gap:16px}
+}
+@media(max-width:900px){
+ .site-header .nav-links{display:none}
+ .tech-hero .hero-grid{grid-template-columns:1fr!important;grid-template-rows:auto!important;grid-template-areas:"copy" "form" "visual"!important;gap:27px!important;padding-top:40px!important;padding-bottom:45px!important}
+ .tech-hero .hero-copy{grid-column:1;grid-row:1;grid-area:copy}
+ .tech-hero .lead-card{grid-column:1;grid-row:2;grid-area:form!important;width:100%!important;max-width:610px!important;margin:0!important}
+ .tech-hero .car-illustration{grid-column:1;grid-row:3;grid-area:visual!important;max-width:700px!important;margin:0!important}
+ .tech-hero .hero-copy h1{font-size:clamp(46px,8.5vw,76px)}
+ .hero-ticker .ticker-grid{padding:20px 0;gap:9px}
+ .hero-ticker .ticker-cell{gap:9px}
+ .hero-ticker strong{font-size:26px}
+ .hero-ticker small{font-size:10px}
+ .editorial-grid{gap:25px}
+}
+@media(max-width:600px){
+ .container{width:calc(100% - 30px)}
+ .site-header{position:relative}
+ .site-header .header-row{min-height:65px}
+ .site-header .logo{font-size:23px;gap:8px}
+ .site-header .logo-mark{width:31px;height:31px}
+ .site-header .logo-mark::after{width:13px;height:13px;top:9px;left:9px}
+ .site-header .header-cta{font-size:11px;padding:11px 13px}
+ .tech-hero .hero-grid{padding-top:27px!important;gap:17px!important;padding-bottom:33px!important}
+ .tech-hero .hero-copy h1{font-size:clamp(39px,10.5vw,53px);margin:14px 0!important;line-height:1.02}
+ .tech-hero .hero-copy .eyebrow{font-size:9px;letter-spacing:.12em}
+ .tech-hero .hero-intro{font-size:14px;line-height:1.55}
+ .tech-hero .benefits{margin:14px 0 0;gap:5px}
+ .tech-hero .benefit{font-size:9px;padding:7px 8px;border-radius:7px}
+ .tech-hero .lead-card{padding:23px 20px 20px;border-radius:21px}
+ .tech-hero .lead-card h2{font-size:24px;line-height:1.13}
+ .tech-hero .lead-card p.sub{margin-bottom:13px;font-size:12px}
+ .tech-hero .lead-card .field input{min-height:48px}
+ .tech-hero .lead-card .form-grid{gap:10px}
+ .tech-hero .lead-card .btn-primary{min-height:50px}
+ .tech-hero .car-illustration{border-radius:18px}
+ .tech-hero .car-photo{height:240px}
+ .tech-hero .car-illustration::before{font-size:9px;top:12px;left:12px}
+ .tech-hero::after{display:none}
+ .hero-ticker .ticker-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;padding:16px 0}
+ .hero-ticker .ticker-cell{display:block;padding:0 5px 0 0}
+ .hero-ticker strong{display:block;font-size:23px;margin-bottom:5px}
+ .hero-ticker small{display:block;font-size:9px}
+ section.content-section{padding:58px 0}
+ .section-heading{margin-bottom:25px}
+ .section-heading h2{font-size:clamp(33px,8.2vw,45px)}
+ .section-heading p{font-size:13px}
+ .scenario-card{padding:23px;min-height:213px}
+ .scenario-card h3{font-size:24px;margin:20px 0 9px}
+ #benefits .feature-card{padding:23px;min-height:unset}
+ #purchase .calc-surface,#compare .calc-surface,#energy .calculator-card,#purchase .calc-summary{border-radius:18px}
+ #request .lead-card{padding:22px 18px}
+ #request .bottom-grid h2{font-size:clamp(43px,9.7vw,58px)}
+ #faq .faq summary{font-size:16px}
+ .footer-row{display:block}
+}
+@media(max-width:360px){
+ .tech-hero .hero-copy h1{font-size:37px}
+ .tech-hero .hero-qualities{gap:4px}
+ .tech-hero .benefit{font-size:8px}
+ .header-cta{padding:9px!important}
+ .logo small{display:none}
+}
+@media(prefers-reduced-motion:reduce){.scenario-card,.service-card{transition:none!important}}
