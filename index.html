@@ -4,7 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#151719">
-  <meta name="description" content="Свой АТОМ для работы в такси. Оставьте заявку на персональные условия покупки электромобиля для самозанятых и ИП.">
+  <meta name="description" content="Купить свой электромобиль АТОМ для работы в такси. Рассчитайте покупку, сравните с арендой и оставьте заявку. Для ИП и самозанятых.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://storage.yandexcloud.net/atom-auto-prod-web-1e75535522cd55b8/Pages/Product/Design/Design/7.jpg">
+  <meta name="robots" content="index,follow">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <meta property="og:title" content="Свой АТОМ для работы в такси">
   <meta property="og:description" content="Узнайте условия покупки электромобиля в собственность. Для водителей такси, ИП и самозанятых.">
   <title>Свой АТОМ для работы в такси | Заявка на покупку</title>
@@ -120,7 +124,107 @@
     @media(max-width:810px) { .hero-grid { grid-template-columns:1fr; gap:22px; padding-top:37px; } .hero h1 { max-width:690px; font-size:clamp(44px,7.4vw,60px); margin:16px 0; } .hero-intro { max-width:690px; } .hero-copy { display:contents; } .hero .eyebrow,.hero h1,.hero-intro,.benefits { grid-column:1; } .hero .eyebrow { grid-row:1; } .hero h1 { grid-row:2; } .hero-intro { grid-row:4; } .benefits { grid-row:5; } .lead-card { grid-column:1; grid-row:3; max-width:600px; width:100%; margin:0 auto; } .car-illustration { grid-column:1; grid-row:6; margin:0 auto -40px; width:100%; max-width:600px; } .car-note { grid-column:1; grid-row:7; margin:0 0 0 20px; } .hero:before { left:40%; top:450px; } .cards-3 { grid-template-columns:1fr; } .scenario-card { min-height:unset; padding:22px; } .scenario-card h3 { margin-top:12px; } .calculator-card { grid-template-columns:1fr; gap:20px; } .steps { grid-template-columns:repeat(2,1fr); } }
     @media(max-width:560px) { .container { width:min(calc(100% - 30px),var(--container)); } .header-row { min-height:62px; } .logo { font-size:26px; } .logo small { display:none; } .logo-mark { width:30px; height:30px; } .header-cta { padding:10px 13px; margin-left:auto; font-size:12px; } .hero-grid { padding-top:27px; padding-bottom:30px; gap:12px; } .hero .eyebrow { font-size:10px; } .hero h1 { font-size:43px; margin:12px 0 6px; line-height:1.045; } .hero-intro { font-size:14px; line-height:1.52; } .benefits { margin:9px 0 6px; gap:6px; } .benefit { font-size:10px; padding:7px 9px; } .lead-card { padding:21px 18px; border-radius:19px; margin-top:1px; } .lead-card h2 { font-size:23px; margin:5px 0 6px; } .lead-card p.sub { font-size:12px; margin-bottom:13px; } .form-grid { gap:10px; } .field input,.field select { min-height:45px; padding:10px 12px; } .lead-card .btn-primary { min-height:48px; font-size:14px; } .checkbox-row label { font-size:10px; } .car-illustration { margin:2px 0 -29px; } .car-note { font-size:10px; margin:0; } section.content-section { padding:56px 0; } .section-heading { display:block; margin-bottom:23px; } .section-heading h2 { font-size:32px; } .section-heading p { font-size:13px; margin-top:13px; } .calculator-card { padding:18px; } .calc-fields { gap:10px; } .calc-result { padding:22px; } .steps { gap:10px; } .step { padding:19px; } .step h3 { font-size:16px; } .bottom-cta { padding:25px 23px; display:block; } .bottom-cta .btn { width:100%; margin-top:19px; } .footer-row { display:block; } .mobile-sticky { display:flex; position:fixed; bottom:0; left:0; width:100%; z-index:10; padding:10px 15px max(10px,env(safe-area-inset-bottom)); background:rgba(255,255,255,.95); backdrop-filter:blur(14px); border-top:1px solid #eaebe8; opacity:0; transform:translateY(120%); pointer-events:none; transition:opacity .2s,transform .2s; } .mobile-sticky.visible { opacity:1; transform:none; pointer-events:auto; } .mobile-sticky .btn { width:100%; min-height:48px; } .site-footer { padding-bottom:90px; } }
     @media(prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} *,*::before,*::after{transition:none!important;} }
-  </style>
+  
+/* Version 2: all new sections use the existing ATOM landing visual language */
+:root{--teal:#247f89}
+.site-header{position:sticky;top:0;z-index:20;box-shadow:0 3px 18px rgba(22,25,26,.03)}
+[id]{scroll-margin-top:90px}
+.hero .car-illustration{margin:10px 0 0;max-width:680px;overflow:hidden;border-radius:25px;box-shadow:0 22px 52px rgba(23,40,44,.11)}
+.car-photo{display:block;width:100%;aspect-ratio:1.53;object-fit:cover;object-position:center;background:#d8edf1}
+.car-note{margin:12px 0 0 5px;font-size:11px}
+.lead-card{border-top:4px solid var(--accent)}
+.lead-card .field label{font-size:13px}
+.demo-note{background:#fff7ed;color:#91502b;border:1px solid #f1cfb9;border-radius:10px;padding:9px 11px;font-size:11px;line-height:1.5}
+.demo-note[hidden]{display:none}
+.micro{font-size:12px;line-height:1.6;color:var(--muted)}
+.surface-muted{background:#f6f6f3}
+.section-subtitle{max-width:650px;color:var(--muted);line-height:1.65;font-size:15px}
+.benefit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.feature-card{border:1px solid #e8e9e5;background:white;border-radius:21px;padding:26px;min-height:205px}
+.feature-icon{display:grid;place-items:center;width:47px;height:47px;background:#e5f3f4;border-radius:14px;color:#1e7582;font-size:24px}
+.feature-card h3{margin:19px 0 8px;font-size:19px;letter-spacing:-.025em}
+.feature-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}
+.calc-section{padding:78px 0}
+.calc-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:23px;align-items:stretch}
+.calc-surface{border:1px solid #e7e8e5;background:#fff;border-radius:24px;padding:30px}
+.calc-surface h3,.calc-summary h3{font-size:21px;line-height:1.25;letter-spacing:-.03em;margin:0 0 22px}
+.calc-inputs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+.calc-inputs .field input{width:100%;min-width:0;min-height:48px;border:1px solid #d9dcd8;border-radius:11px;padding:12px;color:var(--ink)}
+.calc-inputs .field input:focus{outline:2px solid #f7ae8d;outline-offset:1px}
+.calc-inputs .field small{font-size:10px;color:#84898b;line-height:1.45}
+.calc-inputs .field:first-child:nth-last-child(odd){grid-column:auto}
+.calc-summary{background:#25292c;color:#fff;padding:29px;border-radius:24px;display:flex;flex-direction:column;gap:17px}
+.calc-summary .light{color:#c2cacd}
+.hero-metric small{display:block;font-size:12px;color:#bdc6c8;line-height:1.55}
+.hero-metric strong{display:block;font-size:clamp(32px,3.6vw,49px);letter-spacing:-.05em;line-height:1.2;margin:6px 0}
+.metrics{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.metric{background:rgba(255,255,255,.08);padding:15px;border-radius:13px}
+.metric span{display:block;font-size:10px;color:#bdc6c8;line-height:1.4}
+.metric strong{display:block;font-size:18px;margin-top:5px;font-variant-numeric:tabular-nums}
+.calc-summary .btn{width:100%;margin-top:auto}
+.result-note{font-size:11px;color:#c2c8c9;line-height:1.55;margin:0}
+.compare-summary{background:#eff5f4;border-radius:18px;padding:20px;margin-top:18px}
+.compare-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.compare-column{border:1px solid #d8e3df;border-radius:14px;padding:15px;background:#fff}
+.compare-column span{display:block;color:#586568;font-size:11px}
+.compare-column strong{display:block;color:var(--ink);font-size:25px;letter-spacing:-.04em;margin:6px 0}
+.comparison-table{width:100%;border-collapse:collapse;font-size:12px;margin-top:20px}
+.comparison-table th{text-align:left;color:#5a666a;font-weight:650;border-bottom:1px solid #dce4e1;padding:11px 7px}
+.comparison-table td{border-bottom:1px solid #e6ece9;padding:11px 7px}
+.comparison-table th:not(:first-child),.comparison-table td:not(:first-child){text-align:right}
+.comparison-table td:nth-child(2),.comparison-table td:nth-child(3){font-variant-numeric:tabular-nums}
+.compare-outcome{font-weight:750;font-size:16px;margin:16px 0 7px}
+.compare-outcome small{font-size:12px;font-weight:400}
+.energy-detail{margin-top:15px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.energy-detail>div{padding:13px;background:rgba(255,255,255,.08);border-radius:11px}
+.energy-detail small{display:block;color:#abb5b7;font-size:10px}
+.energy-detail strong{display:block;margin:7px 0 0;font-size:21px}
+.energy-bars{margin-top:24px}
+.bar-line{margin:13px 0}
+.bar-caption{display:flex;justify-content:space-between;gap:8px;font-size:12px;margin-bottom:6px}
+.bar-track{height:12px;background:#eee;border-radius:20px;overflow:hidden}
+.bar-fill{height:100%;border-radius:20px;transition:width .25s}
+.bar-fill.fuel{background:#676d71}
+.bar-fill.electric{background:#ed7238}
+.tag-row{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+.tag{display:inline-block;border:1px solid #dce4e4;border-radius:999px;font-size:12px;padding:9px 12px;background:#fff}
+.editorial-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
+.editorial-grid h2{font-size:clamp(31px,3.7vw,48px);letter-spacing:-.05em;line-height:1.1;margin:10px 0 18px}
+.editorial-grid p{line-height:1.7;font-size:15px;color:var(--muted)}
+.editorial-grid img{display:block;width:100%;border-radius:23px;aspect-ratio:1.4;object-fit:cover;background:#d6dadd}
+.spec-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.spec-row>div{border-top:1px solid #dedfdb;padding-top:14px}
+.spec-row strong{display:block;font-size:27px;letter-spacing:-.04em}
+.spec-row small{display:block;color:#82888a;font-size:11px;margin-top:5px;line-height:1.5}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.service-card{padding:25px;background:#fff;border:1px solid #e4e6e2;border-radius:20px}
+.service-card h3{margin:5px 0 12px;font-size:20px;letter-spacing:-.025em}
+.service-card p{font-size:13px;color:var(--muted);line-height:1.7;margin:0}
+.service-card a{color:var(--accent-dark);font-weight:700}
+.legal-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.legal-step{background:#fff;border:1px solid #e5e7e2;border-radius:18px;padding:22px}
+.legal-step span{font-size:12px;color:var(--accent-dark);font-weight:800}
+.legal-step h3{font-size:19px;margin:13px 0 9px}
+.legal-step p{font-size:13px;color:var(--muted);line-height:1.65;margin:0}
+.bottom-section{background:#25282a;color:#fff}
+.bottom-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:48px;align-items:center}
+.bottom-grid h2{font-size:clamp(36px,4.5vw,59px);line-height:1.06;letter-spacing:-.06em;margin:10px 0 18px}
+.bottom-grid p{color:#c6c9cb;max-width:510px;line-height:1.7}
+.bottom-grid .lead-card{color:var(--ink);box-shadow:0 20px 55px rgba(0,0,0,.1)}
+.bottom-grid .lead-card p{color:#6d7375}
+.footer-row{align-items:start}
+.footer-links{display:flex;gap:15px;flex-wrap:wrap}
+.footer-links a{font-size:12px;color:#60676a}
+.form-status{margin-top:8px}
+.form-hint{margin:0;font-size:11px;color:#81878a;line-height:1.5}
+.form-hint a{text-decoration:underline}
+.compare-table-wrap{overflow-x:auto}
+.calculator-card .calc-fields .field input{min-width:0}
+@media(max-width:1080px){.benefit-grid{grid-template-columns:repeat(2,1fr)}.bottom-grid{gap:22px}}
+@media(max-width:810px){.calc-layout,.editorial-grid,.bottom-grid{grid-template-columns:1fr}.legal-steps,.service-grid{grid-template-columns:1fr 1fr}.hero .eyebrow{grid-row:1}.hero h1{grid-row:2}.hero-intro{grid-row:3}.lead-card{grid-row:4}.benefits{grid-row:5}.car-illustration{grid-row:6}.car-note{grid-row:7}.hero .car-illustration{margin:9px 0 0}.bottom-grid .lead-card{max-width:630px}.calc-summary .hero-metric strong{font-size:45px}}
+@media(max-width:560px){.site-header{position:relative}.hero h1{font-size:clamp(36px,10vw,43px)}.benefit-grid,.legal-steps,.service-grid{grid-template-columns:1fr}.feature-card{min-height:auto;padding:22px}.calc-section{padding:54px 0}.calc-surface,.calc-summary{padding:19px;border-radius:18px}.calc-inputs{gap:10px}.calc-inputs .field label{font-size:11px}.calc-inputs .field input{font-size:14px;padding:10px 9px}.hero-metric strong,.calc-summary .hero-metric strong{font-size:38px}.metrics{gap:8px}.metric{padding:12px}.metric strong{font-size:15px}.compare-column{padding:11px}.compare-column strong{font-size:19px}.comparison-table{font-size:11px}.comparison-table th,.comparison-table td{padding:9px 4px}.bottom-grid h2{font-size:39px}.bottom-grid .lead-card{padding:21px 17px}.spec-row strong{font-size:21px}.hero .car-illustration{border-radius:17px}.car-photo{aspect-ratio:1.45}}
+
+</style>
   <script src="./config.js" defer></script>
 </head>
 <body>
@@ -128,7 +232,7 @@
     <div class="container header-row">
       <a class="logo" href="#top" aria-label="На начало страницы"><span class="logo-mark" aria-hidden="true"></span>атом <small>для работы в такси</small></a>
       <nav class="nav-links" aria-label="Разделы страницы">
-        <a href="#for-whom">Для кого</a><a href="#calculator">Калькулятор</a><a href="#how-to">Как купить</a><a href="#faq">Вопросы</a>
+        <a href="#for-whom">Для кого</a><a href="#purchase">Покупка</a><a href="#compare">Аренда или свой</a><a href="#energy">Расходы</a><a href="#faq">Вопросы</a>
       </nav>
       <a class="header-cta" href="#apply">Получить предложение</a>
     </div>
@@ -145,45 +249,22 @@
             <span class="benefit"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="m4 12 5 5L20 6"/></svg>Прямое или парковое подключение</span>
             <span class="benefit"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="m4 12 5 5L20 6"/></svg>Персональные условия</span>
           </div>
-          <div class="car-illustration" aria-hidden="true">
-            <svg viewBox="0 0 670 295" role="img" aria-label="Стилизованная иллюстрация электромобиля">
-              <defs>
-                <linearGradient id="paint" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e5e5df"/><stop offset=".48" stop-color="#a4a9a9"/><stop offset="1" stop-color="#65696c"/></linearGradient>
-                <linearGradient id="glass" x1="0" y1="0" x2="1" y2=".8"><stop stop-color="#78848a"/><stop offset="1" stop-color="#272f36"/></linearGradient>
-              </defs>
-              <ellipse cx="338" cy="249" rx="283" ry="20" fill="#302c2b" opacity=".11"/>
-              <path d="M72 201 Q77 188 108 184 L161 170 218 96 Q233 81 272 76 L427 72 Q465 71 487 90 L549 155 598 173 Q623 179 625 196 L626 221 Q625 235 607 237 L94 237 Q74 233 72 216 Z" fill="url(#paint)" stroke="#777e80" stroke-width="2"/>
-              <path d="M228 102 Q244 90 275 87 L414 84 Q453 85 470 100 L524 158 173 160 Z" fill="url(#glass)" stroke="#434d53" stroke-width="4"/>
-              <path d="M339 87 342 160 M471 103 527 160" stroke="#252c31" stroke-width="7"/>
-              <path d="M165 169 542 167" stroke="#f2f2ef" opacity=".8" stroke-width="4"/>
-              <path d="M90 196 Q95 190 121 189 L143 191 141 203 91 208 Z" fill="#f3e6ce"/>
-              <path d="M559 180 606 189 609 201 559 196 Z" fill="#ef6b3c"/>
-              <rect x="269" y="175" width="43" height="5" rx="2.5" fill="#4d5355"/>
-              <rect x="426" y="173" width="40" height="5" rx="2.5" fill="#4d5355"/>
-              <path d="M74 219 H624" stroke="#4c5051" stroke-width="9"/>
-              <g><circle cx="187" cy="229" r="41" fill="#1d2327"/><circle cx="187" cy="229" r="27" fill="#c6c8c9"/><circle cx="187" cy="229" r="16" fill="#4e565b"/><circle cx="187" cy="229" r="5" fill="#c6c8c9"/></g>
-              <g><circle cx="524" cy="229" r="41" fill="#1d2327"/><circle cx="524" cy="229" r="27" fill="#c6c8c9"/><circle cx="524" cy="229" r="16" fill="#4e565b"/><circle cx="524" cy="229" r="5" fill="#c6c8c9"/></g>
-              <path d="M72 216 Q66 225 83 232 L145 233 M567 233 615 231 Q630 229 626 216" fill="none" stroke="#969d9f" stroke-width="4"/>
-            </svg>
-          </div>
-          <p class="car-note">Иллюстрация условная. В финальной версии заменяется официальной фотографией АТОМа.</p>
+          <div class="car-illustration"><img class="car-photo" src="https://storage.yandexcloud.net/atom-auto-prod-web-1e75535522cd55b8/Pages/Product/Design/Design/7.jpg" alt="Электромобиль АТОМ в фирменном сине-зелёном цвете" width="900" height="590" decoding="async" fetchpriority="high"></div><p class="car-note">Фото: официальный сайт АТОМ. Цвет и характеристики зависят от комплектации.</p>
         </div>
         <aside class="lead-card" id="apply" aria-labelledby="apply-title">
           <div class="lead-card-kicker">Без обязательств</div>
-          <h2 id="apply-title">Узнайте условия покупки</h2>
-          <p class="sub">Оставьте телефон и город. Менеджер подготовит персональное предложение.</p>
-          <form id="lead-form" class="form-grid" novalidate>
-            <div class="field"><label for="lead-phone">Ваш телефон <span>*</span></label><input id="lead-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (999) 123-45-67" required maxlength="22" aria-describedby="phone-help"><span class="sr-only" id="phone-help">Номер в российском формате, 10 цифр после кода страны</span></div>
-            <div class="field"><label for="lead-city">Город работы <span>*</span></label><input id="lead-city" name="city" type="text" autocomplete="address-level2" placeholder="Например, Москва" minlength="2" maxlength="80" required></div>
-            <div class="checkbox-row"><input type="checkbox" id="lead-consent" name="consent_pd" required><label for="lead-consent">Согласен на обработку персональных данных для ответа на заявку. <a href="#privacy">Подробнее</a> <span aria-hidden="true">*</span></label></div>
-            <details class="optional-details"><summary>Дополнительные сведения (необязательно)</summary>
-              <div class="field"><label for="lead-status">Как вы работаете?</label><select id="lead-status" name="driver_status"><option value="not_selected">Можно не указывать</option><option value="self_employed">Самозанятый</option><option value="individual_entrepreneur">ИП</option><option value="not_registered">Пока не оформлен</option></select></div>
-              <div class="checkbox-row"><input type="checkbox" id="lead-marketing" name="consent_marketing"><label for="lead-marketing">Согласен получать рекламные предложения (необязательно)</label></div>
-            </details>
-            <button class="btn btn-primary" id="submit-btn" type="submit">Получить предложение <span aria-hidden="true">→</span></button>
-            <p id="form-status" class="form-status" role="status" aria-live="polite" hidden></p>
-            <p class="form-fine">* Обязательные поля. Условия подтверждает менеджер.</p>
-          </form>
+          <h2 id="apply-title">Получите предложение на покупку АТОМа</h2>
+          <p class="sub">Только город и телефон — уточним условия и поможем с расчётом.</p>
+          <form id="lead-form" class="form-grid lead-form" data-location="hero" novalidate>
+  <div class="field"><label for="lead-city">Город <span>*</span></label><input id="lead-city" name="city" list="cities" type="text" autocomplete="address-level2" placeholder="Начните вводить город" minlength="2" maxlength="80" required></div>
+  <div class="field"><label for="lead-phone">Телефон <span>*</span></label><input id="lead-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (999) 999-99-99" required maxlength="18"></div>
+  <div class="checkbox-row"><input type="checkbox" id="lead-consent" name="consent_pd" required><label for="lead-consent">Даю согласие на обработку персональных данных для ответа на заявку. <a href="./privacy.html" target="_blank" rel="noopener">Полный текст согласия</a> <span aria-hidden="true">*</span></label></div>
+  <button class="btn btn-primary" id="submit-btn" type="submit">Получить предложение <span aria-hidden="true">→</span></button>
+  <p id="form-status" class="form-status" role="status" aria-live="polite" hidden></p>
+  <p class="demo-note demo-mode" hidden>Демо-режим: приём заявок ещё не подключён. Данные не отправляются.</p>
+  <p class="form-fine">Уточним условия приобретения и поможем с расчётом.</p>
+</form>
+<datalist id="cities"><option value="Москва"><option value="Санкт-Петербург"><option value="Казань"><option value="Екатеринбург"><option value="Нижний Новгород"><option value="Новосибирск"><option value="Краснодар"><option value="Сочи"><option value="Самара"><option value="Ростов-на-Дону"><option value="Уфа"><option value="Челябинск"><option value="Пермь"><option value="Калининград"><option value="Тюмень"><option value="Красноярск"><option value="Воронеж"><option value="Омск"><option value="Набережные Челны"></datalist>
         </aside>
       </div>
     </section>
@@ -191,15 +272,96 @@
       <div class="container">
         <div class="section-heading"><div><span class="eyebrow">Начните с вашей ситуации</span><h2>Для тех, кто за рулём каждый день</h2></div><p>Неважно, подключены вы к заказам напрямую или через таксопарк: заявку на покупку автомобиля можно оставить в любом случае.</p></div>
         <div class="cards-3">
-          <article class="scenario-card" data-scenario="rent"><span class="num">01 / Аренда</span><h3>Арендую автомобиль</h3><p>Хочу сравнить регулярные платежи за аренду с покупкой собственной машины.</p><button type="button" data-scenario-button="rent" data-target="#calculator">Сравнить расходы →</button></article>
-          <article class="scenario-card" data-scenario="own"><span class="num">02 / Свой автомобиль</span><h3>Работаю на своей машине</h3><p>Хочу оценить, сколько стоит пробег на бензине и электричестве.</p><button type="button" data-scenario-button="own" data-target="#calculator">Рассчитать расходы →</button></article>
-          <article class="scenario-card" data-scenario="plan"><span class="num">03 / Планирую</span><h3>Хочу начать работать</h3><p>Узнаю, как приобрести АТОМ в собственность и какие нужны документы.</p><button type="button" data-scenario-button="plan" data-target="#apply">Узнать условия →</button></article>
+          <article class="scenario-card" data-scenario="rent"><span class="num">01 / Аренда</span><h3>Арендую автомобиль</h3><p>Хочу сравнить регулярные платежи за аренду с покупкой собственной машины.</p><button type="button" data-scenario-button="rent" data-target="#compare">Сравнить расходы →</button></article>
+          <article class="scenario-card" data-scenario="own"><span class="num">02 / Свой автомобиль</span><h3>Работаю на своей машине</h3><p>Хочу оценить, сколько стоит пробег на бензине и электричестве.</p><button type="button" data-scenario-button="own" data-target="#energy">Рассчитать расходы →</button></article>
+          <article class="scenario-card" data-scenario="plan"><span class="num">03 / Планирую</span><h3>Хочу начать работать</h3><p>Узнаю, как приобрести АТОМ в собственность и какие нужны документы.</p><button type="button" data-scenario-button="plan" data-target="#purchase">Рассчитать покупку →</button></article>
         </div>
       </div>
     </section>
-    <section class="content-section calculator-section" id="calculator">
+    
+<section class="content-section surface-muted" id="benefits">
+ <div class="container">
+  <div class="section-heading"><div><span class="eyebrow">АТОМ в городе</span><h2>Создан для ежедневных поездок</h2></div><p>Электромобиль для тех, кто много времени проводит за рулём. Без обещаний доходности — только особенности, которые можно оценить.</p></div>
+  <div class="benefit-grid">
+   <article class="feature-card"><span class="feature-icon" aria-hidden="true">⚡</span><h3>Электрический привод</h3><p>Плавное ускорение и движение без расхода бензина. Затраты на электричество зависят от тарифа зарядки.</p></article>
+   <article class="feature-card"><span class="feature-icon" aria-hidden="true">₽</span><h3>Стоимость километра</h3><p>Сравните реальные тарифы на энергию, свой пробег и расходы на зарядку в калькуляторе.</p></article>
+   <article class="feature-card"><span class="feature-icon" aria-hidden="true">↗</span><h3>Удобство в городе</h3><p>Компактный кузов, минимальный радиус разворота 4,9 м — для плотного городского движения.</p></article>
+   <article class="feature-card"><span class="feature-icon" aria-hidden="true">◌</span><h3>Комфорт посадки</h3><p>Распашные двери без центральной стойки — удобнее садиться и выходить на остановках.</p></article>
+   <article class="feature-card"><span class="feature-icon" aria-hidden="true">◎</span><h3>Современные технологии</h3><p>Проекция информации на стекло, цифровой интерфейс и ассистенты водителя — в зависимости от исполнения.</p></article>
+   <article class="feature-card"><span class="feature-icon" aria-hidden="true">▱</span><h3>Планирование зарядки</h3><p>Заряжаться можно на совместимых станциях. Учитывайте маршруты, ожидание и доступность разъёмов.</p></article>
+  </div>
+ </div>
+</section>
+<section class="content-section calc-section" id="purchase">
+ <div class="container">
+  <div class="section-heading"><div><span class="eyebrow">01 / Финансирование</span><h2>Сколько будет стоить ваш АТОМ?</h2></div><p>Рассчитайте платёж самостоятельно. Цена и параметры финансирования здесь — редактируемый пример, не предложение банка.</p></div>
+  <div class="calc-layout">
+   <div class="calc-surface">
+    <h3>Параметры покупки</h3>
+    <div class="calc-inputs">
+      <div class="field"><label for="car-price">Стоимость АТОМа, ₽</label><input id="car-price" type="number" min="1" max="30000000" step="10000" value="3980000"><small>Иллюстративная цена, уточняйте актуальную</small></div>
+      <div class="field"><label for="initial-payment">Первоначальный взнос, ₽</label><input id="initial-payment" type="number" min="0" max="30000000" step="10000" value="800000"></div>
+      <div class="field"><label for="loan-months">Срок кредита, мес.</label><input id="loan-months" type="number" min="1" max="120" step="1" value="60"></div>
+      <div class="field"><label for="annual-rate">Процентная ставка, % годовых</label><input id="annual-rate" type="number" min="0" max="100" step=".1" value="18"><small>Пример, не банковская ставка</small></div>
+      <div class="field"><label for="subsidy">Применимая субсидия, ₽</label><input id="subsidy" type="number" min="0" max="30000000" step="10000" value="0"><small>Указывайте только при подтверждённом праве</small></div>
+    </div>
+    <p class="micro" id="purchase-error" role="status">Любое изменение пересчитает параметры. Стоимость страхования и дополнительных услуг в кредит не включена.</p>
+   </div>
+   <div class="calc-summary">
+    <div class="hero-metric"><small>Ориентировочный ежемесячный платёж</small><strong id="loan-payment">—</strong><small>Аннуитетный кредит · примерный сценарий</small></div>
+    <div class="metrics">
+      <div class="metric"><span>Первый взнос</span><strong id="loan-down">—</strong></div>
+      <div class="metric"><span>Сумма кредита</span><strong id="loan-principal">—</strong></div>
+      <div class="metric"><span>Переплата по процентам</span><strong id="loan-overpay">—</strong></div>
+      <div class="metric"><span>Всего выплат с взносом</span><strong id="loan-total">—</strong></div>
+    </div>
+    <p class="result-note">Расчёт предварительный. Решение по кредиту, ставка, субсидия и цена определяются при оформлении.</p>
+    <button type="button" class="btn btn-primary" data-go-form data-cta="purchase">Получить персональный расчёт →</button>
+   </div>
+  </div>
+ </div>
+</section>
+<section class="content-section surface-muted calc-section" id="compare">
+ <div class="container">
+  <div class="section-heading"><div><span class="eyebrow">02 / Аренда против покупки</span><h2>Арендовать или купить свой АТОМ?</h2></div><p>Сравните ежемесячный денежный поток и стоимость владения с учётом остаточной стоимости и непогашенного кредита.</p></div>
+  <div class="calc-layout">
+   <div class="calc-surface">
+    <h3>Ваш текущий сценарий</h3>
+    <div class="calc-inputs">
+     <div class="field"><label for="rent-day">Аренда автомобиля, ₽/сутки</label><input id="rent-day" type="number" min="0" max="50000" value="2300"></div>
+     <div class="field"><label for="rent-days">Оплачиваемых дней в месяц</label><input id="rent-days" type="number" min="0" max="31" value="26"></div>
+     <div class="field"><label for="rent-fuel">Топливо при аренде, ₽/мес.</label><input id="rent-fuel" type="number" min="0" max="500000" value="18000"></div>
+     <div class="field"><label for="rent-other">Доп. расходы аренды, ₽/мес.</label><input id="rent-other" type="number" min="0" max="500000" value="0"></div>
+     <div class="field"><label for="buy-ops">Страховка + сервис АТОМа, ₽/мес.</label><input id="buy-ops" type="number" min="0" max="500000" value="8000"></div>
+     <div class="field"><label for="ownership-period">Период сравнения, мес.</label><input id="ownership-period" type="number" min="1" max="120" value="36"></div>
+     <div class="field"><label for="residual-value">Остаточная стоимость АТОМа, ₽</label><input id="residual-value" type="number" min="0" max="30000000" step="10000" value="1800000"><small>Допущение, не обещание цены перепродажи</small></div>
+    </div>
+    <p class="micro" id="compare-error" role="status">Параметры покупки берутся из калькулятора выше, зарядка — из расчёта стоимости километра ниже.</p>
+   </div>
+   <div class="calc-surface">
+    <h3>Результат сравнения</h3>
+    <div class="compare-summary"><div class="compare-columns">
+      <div class="compare-column"><span>Аренда / месяц</span><strong id="rent-monthly">—</strong><span>Денежный отток</span></div>
+      <div class="compare-column"><span>Свой АТОМ / месяц</span><strong id="own-monthly">—</strong><span>Кредит + энергия + сервис</span></div>
+    </div>
+    <p class="compare-outcome" id="comparison-takeaway">Введите параметры для сравнения</p>
+    <div class="compare-table-wrap"><table class="comparison-table"><thead><tr><th>За период</th><th>Аренда</th><th>Покупка</th></tr></thead><tbody>
+     <tr><td>Первоначальные вложения</td><td>0 ₽</td><td id="own-down-compare">—</td></tr>
+     <tr><td>Ежемесячные расходы × период</td><td id="rent-running">—</td><td id="own-running">—</td></tr>
+     <tr><td>Непогашенный кредит</td><td>0 ₽</td><td id="own-debt">—</td></tr>
+     <tr><td>Остаточная стоимость авто</td><td>0 ₽</td><td id="own-residual">—</td></tr>
+     <tr><td><strong>Итоговая стоимость периода*</strong></td><td id="rent-total">—</td><td id="own-net">—</td></tr>
+    </tbody></table></div>
+    <p class="micro">* Покупка: первоначальный взнос + платежи и эксплуатация за период − (остаточная стоимость − непогашенный кредит). Налоги, простой, комиссии и изменение цены автомобиля не учитываются. Все суммы — пример.</p>
+    </div>
+    <button type="button" class="btn btn-dark" style="width:100%;margin-top:20px" data-go-form data-cta="rent_compare">Получить предложение на покупку →</button>
+   </div>
+  </div>
+ </div>
+</section>
+<section class="content-section calculator-section" id="energy">
       <div class="container">
-        <div class="section-heading"><div><span class="eyebrow">Простой расчёт</span><h2>Расходы на энергию: бензин или электричество?</h2></div><p>Измените цифры под свой пробег. Сравнивается только энергия, без учёта покупки, кредита, страховки, ТО и зарядных потерь.</p></div>
+        <div class="section-heading"><div><span class="eyebrow">03 / Расходы на пробег</span><h2>Сколько стоит ездить на АТОМе?</h2></div><p>Измените цифры под свой пробег. Сравнивается только энергия с учётом потерь зарядки. Это не расчёт полной стоимости владения.</p></div>
         <div class="calculator-card">
           <div class="calc-fields">
             <div class="field"><label for="km">Пробег в месяц, км</label><input id="km" type="number" min="0" max="30000" step="100" value="5000"></div>
@@ -209,87 +371,239 @@
             <div class="field"><label for="power-rate">Расход электроэнергии, кВт·ч/100 км</label><input id="power-rate" type="number" min="0" max="80" step=".5" value="19"></div>
             <div class="field"><label for="power-loss">Потери при зарядке, %</label><input id="power-loss" type="number" min="0" max="60" step="1" value="12"></div>
           </div>
-          <div class="calc-result"><div><div class="overline">Разница расходов на энергию в месяц</div><div class="calc-value" id="calc-diff">—</div><div class="calc-caption" id="calc-interpretation">Введите свой пробег и тарифы.</div></div><div><div class="overline">Бензин: <strong id="calc-petrol">—</strong></div><div class="overline" style="margin-top:8px">Электричество: <strong id="calc-electric">—</strong></div><p class="calc-note">Условные начальные значения — не официальный расчёт стоимости эксплуатации АТОМа и не гарантия экономии.</p><button type="button" class="btn btn-primary" style="margin-top:15px" id="calc-cta">Запросить расчёт покупки →</button></div></div>
+          <div class="calc-result"><div><div class="overline">Разница расходов на энергию в месяц</div><div class="calc-value" id="calc-diff">—</div><div class="calc-caption" id="calc-interpretation">Введите свой пробег и тарифы.</div></div><div><div class="overline">Бензин за месяц: <strong id="calc-petrol">—</strong></div><div class="overline" style="margin-top:8px">Электричество за месяц: <strong id="calc-electric">—</strong></div><div class="energy-detail"><div><small>Бензин на 100 км</small><strong id="fuel-per100">—</strong></div><div><small>Зарядка на 100 км</small><strong id="electric-per100">—</strong></div><div><small>Разница за год</small><strong id="diff-peryear">—</strong></div><div><small>Электроэнергия, кВт·ч/мес.</small><strong id="electric-kwh">—</strong></div></div><div class="energy-bars" aria-label="Графическое сравнение затрат на 100 км"><div class="bar-line"><div class="bar-caption"><span>Бензин</span><strong id="bar-fuel-label">—</strong></div><div class="bar-track"><div id="bar-fuel" class="bar-fill fuel" style="width:0%"></div></div></div><div class="bar-line"><div class="bar-caption"><span>Электричество</span><strong id="bar-electric-label">—</strong></div><div class="bar-track"><div id="bar-electric" class="bar-fill electric" style="width:0%"></div></div></div></div><p class="calc-note">Начальные цифры — примеры. Экономия не гарантирована. Зарядные потери учтены, кредит и страховка — нет.</p><button type="button" class="btn btn-primary" style="margin-top:15px" id="calc-cta">Запросить расчёт покупки →</button></div></div>
         </div>
       </div>
     </section>
-    <section class="content-section" id="how-to">
+    
+<section class="content-section" id="legal">
+ <div class="container">
+  <div class="section-heading"><div><span class="eyebrow">Водитель и собственник</span><h2>Работайте на собственном АТОМе</h2></div><p>Покупка автомобиля и получение права выполнять перевозки — разные процессы. Начать общение о покупке можно с любым статусом.</p></div>
+  <div class="legal-steps">
+   <article class="legal-step"><span>01 / Покупатель</span><h3>Физическое лицо</h3><p>Можно приобрести автомобиль в личную собственность. Для работы в такси отдельно потребуется соблюдение требований к перевозкам.</p></article>
+   <article class="legal-step"><span>02 / Формат работы</span><h3>Самозанятый или ИП</h3><p>Работа водителя возможна в подходящем по закону статусе при выполнении установленных условий и оформлении необходимых разрешений.</p></article>
+   <article class="legal-step"><span>03 / Подключение</span><h3>Напрямую или через парк</h3><p>Способ получения заказов — напрямую через агрегатор или через таксопарк-посредник — сам по себе не определяет, кому принадлежит машина.</p></article>
+  </div>
+  <div class="tag-row"><span class="tag">Автомобиль — ваша собственность</span><span class="tag">Продажа не включает подключение к агрегатору</span><span class="tag">Допуск к такси проверяется отдельно</span></div>
+ </div>
+</section>
+<section class="content-section surface-muted" id="taxi-car">
+ <div class="container editorial-grid">
+  <div><span class="eyebrow">Электромобиль в работе</span><h2>АТОМ для ежедневных поездок</h2><p>Просторный для своих габаритов салон, распашные двери без центральной стойки, цифровые функции и продуманная посадка. Это характеристики автомобиля, а не обещание доступа к конкретному тарифу такси.</p><p>Допуск в «Комфорт», «Комфорт+» или другие тарифы зависит от города и актуальных требований агрегатора. Перед покупкой проверьте соответствие модели и комплектации.</p>
+    <div class="spec-row"><div><strong>4 места</strong><small>включая водителя, до 3 пассажиров</small></div><div><strong>до 500 км</strong><small>паспортный запас хода WLTP, не гарантирован в такси</small></div><div><strong>30 мин</strong><small>зарядка 20–80% на подходящей DC-станции</small></div></div>
+  </div>
+  <div><img loading="lazy" decoding="async" width="720" height="520" alt="Салон электромобиля АТОМ с двумя рядами сидений" src="https://order.atom.auto/_next/image?q=75&amp;url=%2Fmini-configurator%2Fimages%2Fint-colors%2Fwhite%2Fimage.png&amp;w=1920"><p class="micro">Изображение салона — материалы официального конфигуратора АТОМ. Комплектация может отличаться.</p></div>
+ </div>
+</section>
+<section class="content-section" id="charging">
+ <div class="container">
+  <div class="section-heading"><div><span class="eyebrow">Перед покупкой</span><h2>Зарядка, сервис и гарантия</h2></div><p>Задайте вопросы, которые важны именно при ежедневном коммерческом пробеге.</p></div>
+  <div class="service-grid">
+   <article class="service-card"><h3>Где заряжаться?</h3><p>Проверьте доступность совместимых станций у дома и вдоль маршрута. Для поиска можно использовать <a href="https://charge.atom.auto/" target="_blank" rel="noopener">АТОМ Заряд</a>.</p></article>
+   <article class="service-card"><h3>Сколько времени нужно?</h3><p>По официальным характеристикам зарядка 20–80% на подходящей быстрой DC-станции занимает около 30 минут. Фактическое время зависит от условий.</p></article>
+   <article class="service-card"><h3>Что происходит зимой?</h3><p>Холод, отопление, пробки и скорость меняют расход и доступный запас хода. Закладывайте зимний запас в план зарядок.</p></article>
+   <article class="service-card"><h3>Где обслуживаться?</h3><p>Согласуйте ближайший сервисный центр и регламент для выбранной комплектации до оплаты автомобиля.</p></article>
+   <article class="service-card"><h3>Гарантия для такси</h3><p>Гарантийные условия при коммерческой эксплуатации, ограничения по пробегу и детали батареи подтвердите по договору.</p></article>
+   <article class="service-card"><h3>Расходы собственника</h3><p>Учитывайте страховку, ТО, шины, зарядку, ремонт, простой и платежи по финансированию, если оно есть.</p></article>
+  </div>
+ </div>
+</section>
+<section class="content-section" id="how-to">
       <div class="container"><div class="section-heading"><div><span class="eyebrow">Понятный путь</span><h2>Как купить собственный АТОМ</h2></div></div><div class="steps"><article class="step"><b>01</b><h3>Оставьте заявку</h3><p>Телефон и город достаточно, чтобы начать разговор.</p></article><article class="step"><b>02</b><h3>Обсудите условия</h3><p>Уточните цену, наличие и доступные способы оплаты.</p></article><article class="step"><b>03</b><h3>Выберите вариант</h3><p>Покупка за собственные средства или подходящее финансирование.</p></article><article class="step"><b>04</b><h3>Оформите покупку</h3><p>Согласуйте договор, оплату и порядок передачи автомобиля.</p></article></div></div>
     </section>
-    <section class="content-section" id="faq" style="padding-top:10px">
-      <div class="container"><div class="section-heading"><div><span class="eyebrow">Частые вопросы</span><h2>Что важно знать водителю</h2></div></div><div class="faq">
-        <details><summary>Я самозанятый. Могу обратиться за покупкой?</summary><p>Да. Оставить заявку на покупку собственного автомобиля можно независимо от того, работаете ли вы напрямую или через таксопарк. Доступность конкретных программ финансирования нужно уточнять индивидуально.</p></details>
-        <details><summary>Я подключён через таксопарк. Нужно переходить на прямое подключение?</summary><p>Покупка собственного автомобиля и способ подключения к агрегатору — разные вопросы. Переход на прямое подключение сам по себе не является условием подачи заявки на автомобиль.</p></details>
-        <details><summary>После покупки АТОМа можно сразу принимать заказы?</summary><p>Для работы в легковом такси необходимо выполнить действующие требования к перевозчику, автомобилю и водителю. Соответствие автомобиля требованиям конкретных тарифов и агрегаторов нужно уточнять отдельно.</p></details>
-        <details><summary>Как узнать точную стоимость и ежемесячный платёж?</summary><p>Оставьте заявку. Менеджер уточнит актуальную стоимость автомобиля и доступные на дату обращения варианты оплаты. Калькулятор выше сравнивает только расходы на энергию.</p></details>
-      </div></div>
-    </section>
-    <section class="content-section" style="padding-top:30px"><div class="container"><div class="bottom-cta"><div><h2>Свой автомобиль. Свои условия.</h2><p>Оставьте контакты и получите индивидуальную консультацию о покупке.</p></div><a class="btn btn-primary" href="#apply">Получить предложение →</a></div></div></section>
+    <section class="content-section" id="faq">
+ <div class="container"><div class="section-heading"><div><span class="eyebrow">Частые вопросы</span><h2>Что важно знать до покупки</h2></div><p>Короткие ответы. Точные коммерческие и гарантийные условия подтвердите с менеджером.</p></div><div class="faq">
+  <details><summary>Может ли самозанятый купить АТОМ?</summary><p>Да, самозанятый может обратиться за покупкой автомобиля в собственность. Право на использование машины в такси оформляется отдельно.</p></details>
+  <details><summary>Можно ли оформить кредит на ИП?</summary><p>Возможность финансирования на ИП зависит от действующих банковских программ, документов и индивидуального решения банка. Калькулятор показывает только пример платежа.</p></details>
+  <details><summary>Можно ли работать через парк-подключашку?</summary><p>Покупка машины не требует смены способа получения заказов. Работа через партнёра допустима при выполнении действующих требований к перевозчику и документам.</p></details>
+  <details><summary>Нужно ли оформлять ИП?</summary><p>Не всегда. Возможность работать как самозанятый зависит от соблюдения норм о такси и применимого налогового режима. Для перевозок потребуются необходимые разрешения и документы.</p></details>
+  <details><summary>Какие тарифы Яндекс Про будут доступны?</summary><p>До покупки нужно проверить требования именно вашего города, года выпуска и комплектации. Этот сайт не обещает допуск в конкретный тариф.</p></details>
+  <details><summary>Сколько пассажиров помещается?</summary><p>По опубликованным характеристикам АТОМ рассчитан на четыре места, включая водителя, то есть до трёх пассажиров.</p></details>
+  <details><summary>Какая гарантия действует при работе в такси?</summary><p>Коммерческая эксплуатация может иметь специальные условия и ограничения. Гарантийные сроки, пробеги и обслуживание необходимо проверять в официальных документах к приобретаемому автомобилю.</p></details>
+  <details><summary>Сколько стоит зарядка?</summary><p>Стоимость зависит от тарифа конкретной станции или домашней сети, расхода машины и потерь при зарядке. Введите свои значения в калькулятор стоимости километра.</p></details>
+  <details><summary>Как работает электромобиль зимой?</summary><p>Система терморегулирования и обогрев помогают эксплуатации в холоде, но реальный запас хода зимой может быть меньше паспортного. Учитывайте погоду и график работы.</p></details>
+  <details><summary>Как получить автомобиль?</summary><p>Оставьте заявку, уточните условия и наличие, выберите способ оплаты, оформите документы и согласуйте передачу автомобиля.</p></details>
+  <details><summary>Обязателен ли первоначальный взнос?</summary><p>Зависит от выбранной программы финансирования. В калькуляторе можно задать любой взнос в пределах стоимости автомобиля.</p></details>
+  <details><summary>Могу ли я купить АТОМ, если пока не работаю в такси?</summary><p>Да, интерес к покупке не требует предварительной работы в такси. Чтобы в дальнейшем начать перевозки, необходимо выполнить отдельные требования закона и агрегатора.</p></details>
+ </div></div>
+</section>
+    <section class="content-section bottom-section" id="request">
+  <div class="container bottom-grid">
+   <div><span class="eyebrow">Ваш следующий шаг</span><h2>Свой АТОМ.<br>Ваши правила.</h2><p>Посчитайте покупку, сравните расходы и получите предложение под свой город. Всё начинается с двух полей.</p><div class="tag-row"><span class="tag" style="background:#35383a;border-color:#575d5e;color:white">Самозанятые</span><span class="tag" style="background:#35383a;border-color:#575d5e;color:white">ИП</span><span class="tag" style="background:#35383a;border-color:#575d5e;color:white">Начинающие водители</span></div></div>
+   <div class="lead-card"><span class="lead-card-kicker">Без обязательств</span><h2>Получить предложение на АТОМ</h2><p class="sub">Оставьте контакты — поможем с индивидуальным расчётом покупки.</p>
+    <form id="bottom-form" class="form-grid lead-form" data-location="bottom" novalidate>
+     <div class="field"><label for="bottom-city">Город <span>*</span></label><input id="bottom-city" name="city" list="cities" type="text" autocomplete="address-level2" minlength="2" maxlength="80" placeholder="Ваш город" required></div>
+     <div class="field"><label for="bottom-phone">Телефон <span>*</span></label><input id="bottom-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (999) 999-99-99" maxlength="18" required></div>
+     <div class="checkbox-row"><input id="bottom-consent" name="consent_pd" type="checkbox" required><label for="bottom-consent">Даю согласие на обработку персональных данных для ответа на заявку. <a href="./privacy.html" target="_blank" rel="noopener">Полный текст согласия</a> <span aria-hidden="true">*</span></label></div>
+     <button id="bottom-submit" class="btn btn-primary" type="submit">Получить предложение на АТОМ →</button>
+     <p id="bottom-status" class="form-status" role="status" aria-live="polite" hidden></p>
+     <p class="demo-note demo-mode" hidden>Демо-режим: приём заявок ещё не подключён. Данные не отправляются.</p>
+     <p class="form-fine">Условия приобретения уточняются индивидуально.</p>
+    </form>
+   </div>
+  </div>
+ </section>
   </main>
-  <footer class="site-footer"><div class="container footer-row"><div class="logo" aria-label="АТОМ"><span class="logo-mark" aria-hidden="true"></span>атом</div><div class="footer-note" id="privacy">Демонстрационная версия лендинга. Не является публичной офертой. До начала реального сбора заявок необходимо подключить защищённый российский сервер приёма, опубликовать утверждённую политику обработки персональных данных и указать оператора персональных данных. Маркетинговое согласие не требуется для отправки заявки.</div></div></footer>
+  <footer class="site-footer"><div class="container footer-row"><div class="logo" aria-label="АТОМ"><span class="logo-mark" aria-hidden="true"></span>атом</div><div class="footer-note"><div class="footer-links"><a href="./privacy.html">Согласие на обработку данных</a><a href="https://atom.auto/" target="_blank" rel="noopener">Официальный сайт АТОМ</a><a href="#purchase">Калькулятор покупки</a></div><p>Демонстрационный лендинг. Не публичная оферта. Параметры кредита и стоимости владения — пример. Для реального сбора лидов необходимы утверждённые юридические документы, российский сервер приёма и CRM API.</p></div></div></footer>
   <div class="mobile-sticky" id="mobile-sticky"><a class="btn btn-primary" href="#apply">Получить предложение →</a></div>
   <script>
-    (() => {
-      'use strict';
-      const form = document.getElementById('lead-form');
-      const status = document.getElementById('form-status');
-      const submitButton = document.getElementById('submit-btn');
-      const source = new URLSearchParams(window.location.search);
-      let scenario = 'not_selected';
-      let started = false;
-      const track = (event, extra={}) => { try { window.dataLayer = window.dataLayer || []; window.dataLayer.push({event,...extra}); } catch(e) {} };
-      const showStatus = (message, state='error') => { status.hidden=false; status.dataset.state=state; status.textContent=message; };
-      const toNumber = id => {const n=Number(document.getElementById(id).value); return Number.isFinite(n)&&n>=0?n:0;};
-      const money = n => Math.round(n).toLocaleString('ru-RU') + ' ₽';
-      const calc = () => {
-        const km=toNumber('km'),fuel=km/100*toNumber('fuel-rate')*toNumber('fuel-price');
-        const electricity=km/100*toNumber('power-rate')*toNumber('power-price')*(1+toNumber('power-loss')/100);
-        const diff=fuel-electricity;
-        document.getElementById('calc-petrol').textContent=money(fuel);
-        document.getElementById('calc-electric').textContent=money(electricity);
-        document.getElementById('calc-diff').textContent=money(Math.abs(diff));
-        document.getElementById('calc-interpretation').textContent=diff>0?'При выбранных параметрах электричество дешевле.':diff<0?'При выбранных параметрах бензин дешевле.':'При выбранных параметрах расходы одинаковы.';
-      };
-      ['km','fuel-price','fuel-rate','power-price','power-rate','power-loss'].forEach(id => document.getElementById(id).addEventListener('input',calc));
-      calc();
-      const goApply = () => {document.getElementById('apply').scrollIntoView({behavior:'smooth',block:'start'});};
-      document.getElementById('calc-cta').addEventListener('click',()=>{track('calculator_cta');goApply();});
-      document.querySelectorAll('[data-scenario-button]').forEach(btn=>btn.addEventListener('click',()=>{
-        scenario=btn.dataset.scenarioButton;
-        document.querySelectorAll('.scenario-card').forEach(card=>card.classList.toggle('active',card.dataset.scenario===scenario));
-        track('scenario_select',{scenario});
-        document.querySelector(btn.dataset.target).scrollIntoView({behavior:'smooth',block:'start'});
-      }));
-      form.addEventListener('input',()=>{ if(!started){track('lead_form_start',{form_id:'hero'});started=true;} });
-      form.addEventListener('submit',async e=>{
-        e.preventDefault();
-        status.hidden=true;
-        const phoneRaw=document.getElementById('lead-phone').value.trim();
-        const digits=phoneRaw.replace(/\D/g,'');
-        const normalized=digits.length===11&&digits[0]==='8'?'7'+digits.slice(1):digits.length===10?'7'+digits:digits;
-        const city=document.getElementById('lead-city').value.trim();
-        const consent=document.getElementById('lead-consent').checked;
-        if(!/^7\d{10}$/.test(normalized)){showStatus('Проверьте номер телефона: укажите 10 цифр после +7.');document.getElementById('lead-phone').focus();return;}
-        if(city.length<2){showStatus('Укажите город работы.');document.getElementById('lead-city').focus();return;}
-        if(!consent){showStatus('Для отправки заявки необходимо согласие на обработку данных.');document.getElementById('lead-consent').focus();return;}
-        const config=window.ATOM_CONFIG||{};
-        if(!config.leadEndpoint){showStatus('Демо-версия: приём заявок ещё не подключён. Контактные данные никуда не отправлены.');track('lead_submit_unconfigured',{form_id:'hero'});return;}
-        const payload={phone:'+'+normalized,city,driver_status:document.getElementById('lead-status').value,consent_pd:true,consent_marketing:document.getElementById('lead-marketing').checked,scenario,lead_source:'atom_taxi_owner_landing',page_url:window.location.href,submitted_at:new Date().toISOString(),utm_source:source.get('utm_source')||'',utm_medium:source.get('utm_medium')||'',utm_campaign:source.get('utm_campaign')||'',utm_content:source.get('utm_content')||'',utm_term:source.get('utm_term')||''};
-        submitButton.disabled=true;submitButton.textContent='Отправляем…';
-        try {
-          const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),15000);
-          let response;
-          try {response=await fetch(config.leadEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),signal:controller.signal,credentials:'omit'});} finally{clearTimeout(timeout);}
-          if(!response.ok)throw new Error('HTTP '+response.status);
-          showStatus('Заявка отправлена. Мы свяжемся с вами после обработки обращения.','success');
-          track('generate_lead',{form_id:'hero',scenario});form.reset();started=false;
-        } catch(err){showStatus('Не удалось отправить заявку. Проверьте подключение и попробуйте ещё раз.');track('lead_submit_error',{form_id:'hero'});}
-        finally{submitButton.disabled=false;submitButton.innerHTML='Получить предложение <span aria-hidden="true">→</span>';}
-      });
-      const sticky=document.getElementById('mobile-sticky');
-      if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{sticky.classList.toggle('visible',!entries[0].isIntersecting);},{threshold:0});observer.observe(document.getElementById('apply'));}
-      document.querySelectorAll('.faq details').forEach((el,i)=>el.addEventListener('toggle',()=>{if(el.open)track('faq_open',{faq_index:i+1});}));
-    })();
-  </script>
+(() => {
+ "use strict";
+ const cfg = window.ATOM_CONFIG || {};
+ const $ = id => document.getElementById(id);
+ const n = id => {const el=$(id); if(!el || !el.value.trim()) return NaN; const v=Number(el.value);return Number.isFinite(v)?v:NaN;};
+ const fmt = value => Number.isFinite(value)?Math.round(value).toLocaleString('ru-RU')+' ₽':'—';
+ const unit = value => Number.isFinite(value)?Math.round(value).toLocaleString('ru-RU'):'—';
+ const put = (id,text) => {const el=$(id);if(el)el.textContent=text;};
+ const goal = (name,data={}) => {try{window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:name,...data});if(cfg.metrikaCounter&&typeof window.ym==='function')window.ym(cfg.metrikaCounter,'reachGoal',name);}catch(e){}};
+ const qs = new URLSearchParams(window.location.search);
+ let scenario='not_selected';
+ let loanState=null,energyState=null;
+ const numbers = [ 'car-price','initial-payment','loan-months','annual-rate','subsidy','rent-day','rent-days','rent-fuel','rent-other','buy-ops','ownership-period','residual-value','km','fuel-price','fuel-rate','power-price','power-rate','power-loss'];
+ const valid = (v,min,max) => Number.isFinite(v)&&v>=min&&v<=max;
+ function loanCalc(){
+   const price=n('car-price'),down=n('initial-payment'),months=n('loan-months'),rate=n('annual-rate'),sub=n('subsidy');
+   const validData=valid(price,1,30000000)&&valid(down,0,30000000)&&valid(months,1,120)&&Number.isInteger(months)&&valid(rate,0,100)&&valid(sub,0,30000000)&&sub<=price&&down<=price-sub;
+   if(!validData){
+     loanState=null;
+     ['loan-payment','loan-down','loan-principal','loan-overpay','loan-total'].forEach(id=>put(id,'—'));
+     put('purchase-error','Проверьте поля: сумма субсидии и взноса вместе не должна превышать цену, срок — от 1 до 120 месяцев.');
+     return;
+   }
+   const principal=Math.max(0,price-sub-down),r=rate/1200;
+   const pay=principal===0?0:r===0?principal/months:principal*r/(1-Math.pow(1+r,-months));
+   const totalLoan=pay*months;
+   loanState={price,down,months,rate,sub,principal,pay,overpay:totalLoan-principal,total:down+totalLoan,r};
+   put('loan-payment',fmt(pay));put('loan-down',fmt(down));put('loan-principal',fmt(principal));put('loan-overpay',fmt(totalLoan-principal));put('loan-total',fmt(down+totalLoan));
+   put('purchase-error','Примерный расчёт: страхование, комиссии и дополнительные услуги не включены.');
+ }
+ function energyCalc(){
+   const km=n('km'),fp=n('fuel-price'),fr=n('fuel-rate'),ep=n('power-price'),er=n('power-rate'),loss=n('power-loss');
+   const values=[[km,0,30000],[fp,0,500],[fr,0,50],[ep,0,150],[er,0,80],[loss,0,60]];
+   const ok=values.every(a=>valid(...a));
+   if(!ok){
+     energyState=null;
+     ['calc-petrol','calc-electric','calc-diff','fuel-per100','electric-per100','diff-peryear','electric-kwh','bar-fuel-label','bar-electric-label'].forEach(id=>put(id,'—'));
+     put('calc-interpretation','Проверьте введённые значения.');
+     $('bar-fuel').style.width='0%';$('bar-electric').style.width='0%';
+     return;
+   }
+   const fuelPer100=fr*fp;
+   const electricPer100=er*ep*(1+loss/100);
+   const fuel=fuelPer100*km/100;
+   const electric=electricPer100*km/100;
+   const diff=fuel-electric;
+   const kwh=er*km/100*(1+loss/100);
+   energyState={km,fuel,electric,diff,kwh,fuelPer100,electricPer100};
+   put('calc-petrol',fmt(fuel));put('calc-electric',fmt(electric));put('calc-diff',fmt(Math.abs(diff)));
+   put('calc-interpretation',diff>0?'При выбранных данных на электричество уходит меньше денег.':diff<0?'При выбранных данных на бензин уходит меньше денег.':'При выбранных данных затраты одинаковы.');
+   put('fuel-per100',fmt(fuelPer100));put('electric-per100',fmt(electricPer100));put('diff-peryear',fmt(diff*12));put('electric-kwh',unit(kwh));
+   put('bar-fuel-label',fmt(fuelPer100));put('bar-electric-label',fmt(electricPer100));
+   const max=Math.max(fuelPer100,electricPer100,1);
+   $('bar-fuel').style.width=(100*fuelPer100/max)+'%';$('bar-electric').style.width=(100*electricPer100/max)+'%';
+ }
+ function outstanding(loan,paidMonths){
+   const k=Math.min(Math.max(0,paidMonths),loan.months);
+   if(k>=loan.months)return 0;
+   if(loan.r===0)return Math.max(0,loan.principal-loan.pay*k);
+   const growth=Math.pow(1+loan.r,k);
+   return Math.max(0,loan.principal*growth-loan.pay*(growth-1)/loan.r);
+ }
+ function compareCalc(){
+   const daily=n('rent-day'),days=n('rent-days'),rentFuel=n('rent-fuel'),other=n('rent-other'),ops=n('buy-ops'),period=n('ownership-period'),residual=n('residual-value');
+   const ok=loanState&&energyState&&valid(daily,0,50000)&&valid(days,0,31)&&valid(rentFuel,0,500000)&&valid(other,0,500000)&&valid(ops,0,500000)&&valid(period,1,120)&&Number.isInteger(period)&&valid(residual,0,30000000);
+   const ids=['rent-monthly','own-monthly','own-down-compare','rent-running','own-running','own-debt','own-residual','rent-total','own-net'];
+   if(!ok){ids.forEach(id=>put(id,'—'));put('comparison-takeaway','Проверьте вводные данные в трёх калькуляторах.');put('compare-error','Для сравнения нужны корректные данные аренды, покупки и расходов на электричество.');return;}
+   const rentPerMonth=daily*days+rentFuel+other;
+   const ownPerMonth=loanState.pay+energyState.electric+ops;
+   const debt=outstanding(loanState,period);
+   const rentTotal=rentPerMonth*period;
+   const loanPaid=loanState.pay*Math.min(period,loanState.months);
+   const running=loanPaid+(energyState.electric+ops)*period;
+   const outflow=loanState.down+running;
+   const netCost=outflow-(residual-debt);
+   put('rent-monthly',fmt(rentPerMonth));put('own-monthly',fmt(ownPerMonth));put('own-down-compare',fmt(loanState.down));
+   put('rent-running',fmt(rentTotal));put('own-running',fmt(running));put('own-debt',fmt(debt));put('own-residual',fmt(residual));put('rent-total',fmt(rentTotal));put('own-net',fmt(netCost));
+   const diff=rentTotal-netCost;
+   put('comparison-takeaway',Math.abs(diff)<1?'При выбранных допущениях итоговые расходы равны.':diff>0?'При выбранных допущениях покупка дешевле на '+fmt(diff)+'.':'При выбранных допущениях аренда дешевле на '+fmt(-diff)+'.');
+   put('compare-error','Остаточная стоимость — предположение, а не гарантированная цена продажи. Поменяйте её и проверьте результат.');
+ }
+ function recalc(){loanCalc();energyCalc();compareCalc();}
+ numbers.forEach(id=>{const el=$(id);if(el){el.addEventListener('input',recalc);el.addEventListener('change',()=>goal('calculator_change',{calculator:id.startsWith('car-')||['initial-payment','loan-months','annual-rate','subsidy'].includes(id)?'purchase':id.startsWith('rent-')||['buy-ops','ownership-period','residual-value'].includes(id)?'compare':'energy'}));}});
+ recalc();
+ function goApply(cta){goal('cta_click',{cta});$('apply').scrollIntoView({behavior:'smooth',block:'start'});}
+ $('calc-cta').addEventListener('click',()=>goApply('energy'));
+ document.querySelectorAll('[data-go-form]').forEach(el=>el.addEventListener('click',()=>goApply(el.dataset.cta||'section')));
+ document.querySelectorAll('[data-scenario-button]').forEach(btn=>btn.addEventListener('click',()=>{
+   scenario=btn.dataset.scenarioButton;
+   document.querySelectorAll('.scenario-card').forEach(card=>card.classList.toggle('active',card.dataset.scenario===scenario));
+   goal('scenario_select',{scenario});
+   const target=document.querySelector(btn.dataset.target); if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+ }));
+ const formatPhone = value => {
+   let d=value.replace(/\D/g,'');if(d[0]==='8')d='7'+d.slice(1);if(d[0]==='7')d=d.slice(1);d=d.slice(0,10);
+   if(!d)return '';
+   let s='+7 ('+d.slice(0,3);
+   if(d.length>=3)s+=')';if(d.length>3)s+=' '+d.slice(3,6);
+   if(d.length>6)s+='-'+d.slice(6,8);
+   if(d.length>8)s+='-'+d.slice(8,10);
+   return s;
+ };
+ document.querySelectorAll('.demo-mode').forEach(el=>el.hidden=Boolean(cfg.leadEndpoint));
+ const pending=new WeakMap(),started=new WeakSet(),submitting=new WeakSet();
+ document.querySelectorAll('.lead-form').forEach(form=>{
+   const area=form.dataset.location;
+   const phone=form.querySelector('[name="phone"]'),city=form.querySelector('[name="city"]'),consent=form.querySelector('[name="consent_pd"]'),button=form.querySelector('[type="submit"]'),status=form.querySelector('.form-status');
+   const feedback=(message,state='error')=>{status.hidden=false;status.dataset.state=state;status.textContent=message;};
+   phone.addEventListener('input',()=>{const formatted=formatPhone(phone.value);if(phone.value!==formatted)phone.value=formatted;});
+   form.addEventListener('input',()=>{if(!started.has(form)){started.add(form);goal('lead_form_start',{form_location:area});}});
+   form.addEventListener('submit',async ev=>{
+     ev.preventDefault();status.hidden=true;
+     if(submitting.has(form))return;
+     const digits=phone.value.replace(/\D/g,'');const tel=digits.length===11&&digits[0]==='8'?'7'+digits.slice(1):digits.length===10?'7'+digits:digits;
+     const loc=city.value.trim();
+     if(!/^7\d{10}$/.test(tel)){feedback('Проверьте телефон: нужен российский номер +7 и 10 цифр.');goal('lead_validation_error',{form_location:area,field:'phone'});phone.focus();return;}
+     if(loc.length<2||loc.length>80){feedback('Укажите ваш город.');goal('lead_validation_error',{form_location:area,field:'city'});city.focus();return;}
+     if(!consent.checked){feedback('Отметьте согласие на обработку персональных данных.');goal('lead_validation_error',{form_location:area,field:'consent'});consent.focus();return;}
+     if(!cfg.leadEndpoint){feedback('Демо-режим: сервер заявок не подключён. Данные никуда не отправлены.');goal('lead_submit_unconfigured',{form_location:area});return;}
+     if(!/^https:\/\//i.test(cfg.leadEndpoint)){feedback('Сервер заявок настроен некорректно. Требуется HTTPS.');return;}
+     const timestamp=new Date().toISOString();
+     const key=pending.get(form)||((typeof crypto!=='undefined'&&crypto.randomUUID)?crypto.randomUUID():'req-'+Date.now()+'-'+Math.random().toString(36).slice(2));
+     pending.set(form,key);
+     const payload={
+       phone:'+'+tel,city:loc,source:'ATOM_TAXI_B2C2B',lead_source:'ATOM_TAXI_B2C2B',created_at:timestamp,
+       utm_source:qs.get('utm_source')||'',utm_medium:qs.get('utm_medium')||'',utm_campaign:qs.get('utm_campaign')||'',
+       utm_content:qs.get('utm_content')||'',utm_term:qs.get('utm_term')||'',
+       form_location:area,consent_pd:true,consent_version:cfg.consentVersion||'draft-2026-11-09',consent_timestamp:timestamp,
+       scenario,calculator:{purchase:loanState?{price:loanState.price,down:loanState.down,months:loanState.months,annual_rate:loanState.rate,subsidy:loanState.sub,payment:Math.round(loanState.pay)}:null,energy:energyState?{monthly_km:energyState.km,fuel_monthly:Math.round(energyState.fuel),electric_monthly:Math.round(energyState.electric)}:null},
+       idempotency_key:key
+     };
+     submitting.add(form);button.disabled=true;const previous=button.innerHTML;button.textContent='Отправляем…';
+     try{
+       const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),15000);
+       let response;try{response=await fetch(cfg.leadEndpoint,{method:'POST',headers:{'Content-Type':'application/json','X-Idempotency-Key':key},body:JSON.stringify(payload),signal:controller.signal,credentials:'omit'});}finally{clearTimeout(timeout);}
+       if(!response.ok)throw new Error('HTTP '+response.status);
+       let result;try{result=await response.json();}catch(e){throw new Error('Missing server acknowledgement');}
+       if(!result||result.success===false||!(result.lead_id||result.id))throw new Error('Missing confirmed lead identifier');
+       feedback('Спасибо! Заявка отправлена. Мы свяжемся с вами.','success');
+       goal('generate_lead',{form_location:area,scenario});
+       if(area==='bottom')goal('bottom_form_success',{form_location:area});
+       form.reset();pending.delete(form);started.delete(form);
+     }catch(e){
+       feedback('Не удалось подтвердить сохранение заявки. Попробуйте ещё раз или обратитесь по официальным контактам АТОМ.');
+       goal('lead_submit_error',{form_location:area});
+     }finally{submitting.delete(form);button.disabled=false;button.innerHTML=previous;}
+   });
+ });
+ const sticky=$('mobile-sticky');
+ if(sticky&&'IntersectionObserver' in window){
+   const observer=new IntersectionObserver(entries=>{sticky.classList.toggle('visible',!entries[0].isIntersecting);},{threshold:0});
+   observer.observe($('apply'));
+ }
+ document.querySelectorAll('.faq details').forEach((el,index)=>el.addEventListener('toggle',()=>{if(el.open)goal('faq_open',{faq_index:index+1});}));
+ const viewObserver=('IntersectionObserver' in window)?new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){goal('hero_form_view',{form_location:'hero'});viewObserver.disconnect();}});},{threshold:.1}):null;
+ if(viewObserver)viewObserver.observe($('apply'));
+})();
+</script>
 </body>
 </html>
