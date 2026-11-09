@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151719">
+  <meta name="description" content="Свой АТОМ для работы в такси. Оставьте заявку на персональные условия покупки электромобиля для самозанятых и ИП.">
+  <meta property="og:title" content="Свой АТОМ для работы в такси">
+  <meta property="og:description" content="Узнайте условия покупки электромобиля в собственность. Для водителей такси, ИП и самозанятых.">
+  <title>Свой АТОМ для работы в такси | Заявка на покупку</title>
+  <style>
+    :root { color-scheme: light; --ink:#1c2023; --muted:#666d71; --tint:#f4f4f1; --accent:#ec682f; --accent-dark:#c84e17; --line:#dddeda; --radius:21px; --container:1180px; }
+    *,*::before,*::after { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; color:var(--ink); background:white; -webkit-font-smoothing:antialiased; }
+    button,input,select { font:inherit; }
+    a { color:inherit; }
+    button { cursor:pointer; }
+    .container { width:min(calc(100% - 48px),var(--container)); margin:auto; }
+    .sr-only { position:absolute!important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    :focus-visible { outline:3px solid #f5a377; outline-offset:3px; }
+    .site-header { background:#fff; border-bottom:1px solid #ecece9; position:relative; z-index:3; }
+    .header-row { min-height:78px; display:flex; align-items:center; gap:32px; }
+    .logo { display:flex; align-items:center; gap:12px; text-decoration:none; font-weight:820; letter-spacing:-.065em; font-size:30px; }
+    .logo-mark { display:inline-grid; place-items:center; background:var(--ink); width:34px; height:34px; border-radius:11px; }
+    .logo-mark::after { content:""; display:block; background:var(--accent); width:18px; height:18px; border-radius:50%; box-shadow:inset 0 0 0 6px var(--ink); border:3px solid var(--accent); }
+    .logo small { font-size:12px; letter-spacing:0; color:var(--muted); font-weight:600; margin-left:5px; }
+    .nav-links { display:flex; align-items:center; gap:27px; margin-left:auto; }
+    .nav-links a { font-size:13px; font-weight:650; text-decoration:none; white-space:nowrap; }
+    .nav-links a:hover { color:var(--accent-dark); }
+    .header-cta { text-decoration:none; border:1px solid var(--line); padding:12px 17px; border-radius:999px; font-weight:700; font-size:13px; white-space:nowrap; }
+    .header-cta:hover { border-color:var(--accent); color:var(--accent-dark); }
+    .hero { position:relative; overflow:hidden; background:radial-gradient(circle at 38% 52%,#f8e9de 0%,transparent 38%),linear-gradient(115deg,#faf9f6,#f2f2ef 78%); }
+    .hero:before { content:""; position:absolute; width:460px; height:460px; border:1px solid #e8dfd7; border-radius:50%; top:130px; left:17%; pointer-events:none; }
+    .hero-grid { display:grid; grid-template-columns:minmax(0,1fr) 415px; gap:52px; align-items:start; padding-top:57px; padding-bottom:45px; position:relative; }
+    .eyebrow { display:inline-flex; align-items:center; gap:9px; color:var(--accent-dark); font-size:12px; font-weight:800; letter-spacing:.11em; text-transform:uppercase; }
+    .eyebrow:before { content:""; display:block; width:9px; height:9px; border-radius:50%; background:var(--accent); }
+    .hero h1 { font-size:clamp(46px,5.1vw,73px); line-height:1.045; letter-spacing:-.065em; font-weight:790; margin:21px 0 19px; max-width:730px; }
+    .hero h1 em { font-style:normal; color:var(--accent); }
+    .hero-intro { max-width:570px; font-size:18px; line-height:1.62; color:#50565a; margin:0; }
+    .benefits { display:flex; gap:13px; flex-wrap:wrap; margin:25px 0 8px; }
+    .benefit { border:1px solid #e5ddd5; background:rgba(255,255,255,.66); color:#393f42; display:inline-flex; gap:8px; align-items:center; padding:9px 12px; border-radius:999px; font-size:12px; font-weight:700; }
+    .benefit svg { flex:none; color:var(--accent); }
+    .car-illustration { position:relative; max-width:630px; margin:-4px 0 -30px -32px; }
+    .car-illustration svg { display:block; width:100%; height:auto; overflow:visible; filter:drop-shadow(0 19px 20px rgba(35,34,33,.12)); }
+    .car-note { font-size:11px; color:#7b7d7f; margin:-25px 0 0 35px; position:relative; }
+    .lead-card { background:#fff; border:1px solid rgba(30,34,37,.07); border-radius:25px; padding:29px; box-shadow:0 18px 55px rgba(45,34,25,.09); position:relative; z-index:1; }
+    .lead-card-kicker { color:var(--accent-dark); font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+    .lead-card h2 { font-size:28px; letter-spacing:-.045em; line-height:1.13; margin:9px 0 9px; font-weight:790; }
+    .lead-card p.sub { font-size:13px; color:#6d7375; line-height:1.5; margin:0 0 20px; }
+    .form-grid { display:grid; gap:13px; }
+    .field { display:grid; gap:6px; }
+    .field label { font-size:12px; font-weight:720; color:#3e4446; }
+    .field label span { color:var(--accent-dark); }
+    .field input,.field select { width:100%; min-height:49px; border:1px solid #dadee0; border-radius:11px; padding:12px 14px; background:#fff; color:#212529; outline:0; transition:border-color .15s,box-shadow .15s; font-size:15px; }
+    .field input:focus,.field select:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(236,104,47,.12); }
+    .field input::placeholder { color:#9b9fa1; }
+    .checkbox-row { display:flex; align-items:flex-start; gap:9px; padding-top:1px; }
+    .checkbox-row input { width:17px; height:17px; flex:none; margin:2px 0 0; accent-color:var(--accent); cursor:pointer; }
+    .checkbox-row label { color:#5f6568; font-size:11px; line-height:1.45; cursor:pointer; }
+    .checkbox-row a { text-underline-offset:2px; }
+    .btn { appearance:none; border:0; display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:16px 22px; border-radius:12px; font-weight:770; font-size:15px; text-decoration:none; transition:background .16s,transform .16s; }
+    .btn:hover { transform:translateY(-1px); }
+    .btn-primary { background:var(--accent); color:white; }
+    .btn-primary:hover { background:var(--accent-dark); }
+    .btn-primary:disabled { opacity:.65; cursor:wait; transform:none; }
+    .btn-dark { background:var(--ink); color:white; }
+    .btn-quiet { background:#f3f3f0; color:var(--ink); }
+    .lead-card .btn-primary { width:100%; min-height:54px; margin-top:2px; }
+    .optional-details { border:1px solid #ecece8; border-radius:10px; padding:9px 11px; }
+    .optional-details summary { cursor:pointer; font-weight:620; font-size:11px; color:#656c6f; }
+    .optional-details[open] { display:grid; gap:11px; }
+    .optional-details[open] summary { margin-bottom:8px; }
+    .optional-details .checkbox-row { margin-top:8px; }
+    .form-status { padding:10px 12px; background:#fff3ec; border-radius:10px; font-size:12px; line-height:1.5; margin:0; color:#893e18; }
+    .form-status[data-state=success] { background:#e8f5ec; color:#236b41; }
+    .form-status[hidden] { display:none; }
+    .form-fine { color:#8b9092; font-size:10px; margin:0; text-align:center; }
+    section.content-section { padding:82px 0; }
+    .section-heading { display:flex; justify-content:space-between; align-items:end; gap:30px; margin-bottom:32px; }
+    .section-heading h2 { font-size:clamp(31px,3.7vw,48px); line-height:1.08; letter-spacing:-.05em; font-weight:780; margin:8px 0 0; max-width:760px; }
+    .section-heading p { margin:0; max-width:335px; color:var(--muted); font-size:15px; line-height:1.5; }
+    .cards-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .scenario-card { padding:27px; border:1px solid #e6e7e6; border-radius:22px; background:white; min-height:228px; display:flex; flex-direction:column; }
+    .scenario-card.active { border-color:var(--accent); box-shadow:inset 0 0 0 1px var(--accent),0 12px 28px rgba(236,104,47,.07); }
+    .num { font-size:12px; color:var(--accent-dark); font-weight:800; }
+    .scenario-card h3 { font-size:22px; letter-spacing:-.035em; margin:19px 0 8px; }
+    .scenario-card p { font-size:14px; color:var(--muted); line-height:1.6; margin:0 0 23px; }
+    .scenario-card button { margin-top:auto; text-align:left; background:none; border:0; padding:0; color:var(--accent-dark); font-weight:760; font-size:13px; }
+    .calculator-section { background:#f6f6f3; }
+    .calculator-card { background:white; border:1px solid #e7e8e5; border-radius:24px; padding:31px; display:grid; grid-template-columns:1fr 0.95fr; gap:36px; }
+    .calc-fields { display:grid; grid-template-columns:1fr 1fr; gap:15px; }
+    .calc-result { display:flex; flex-direction:column; justify-content:space-between; border-radius:20px; background:#1c2023; color:white; padding:28px; }
+    .calc-result .overline { color:#a6afb0; font-size:12px; letter-spacing:.04em; text-transform:uppercase; }
+    .calc-result .calc-value { font-size:clamp(35px,4.7vw,58px); font-weight:800; letter-spacing:-.06em; margin:8px 0 2px; }
+    .calc-result .calc-caption { font-size:13px; color:#c3cbcd; margin:5px 0 24px; line-height:1.5; }
+    .calc-result .calc-note { color:#a6afb0; font-size:11px; line-height:1.5; margin:15px 0 0; }
+    .steps { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+    .step { padding:25px; background:#f7f7f4; border-radius:20px; }
+    .step b { color:var(--accent); font-size:35px; font-weight:760; }
+    .step h3 { font-size:18px; letter-spacing:-.03em; margin:18px 0 6px; }
+    .step p { font-size:13px; line-height:1.6; color:var(--muted); margin:0; }
+    .faq { border-top:1px solid var(--line); }
+    .faq details { border-bottom:1px solid var(--line); padding:19px 0; }
+    .faq summary { font-size:17px; font-weight:680; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:12px; }
+    .faq summary::-webkit-details-marker { display:none; }
+    .faq summary::after { content:"+"; color:var(--accent); font-size:24px; font-weight:400; }
+    .faq details[open] summary::after { content:"−"; }
+    .faq p { margin:11px 0 0; max-width:840px; color:var(--muted); line-height:1.65; font-size:14px; }
+    .bottom-cta { background:#25282a; color:white; border-radius:24px; padding:32px 37px; display:flex; align-items:center; justify-content:space-between; gap:26px; }
+    .bottom-cta h2 { font-size:clamp(26px,3.2vw,38px); letter-spacing:-.04em; margin:0 0 8px; }
+    .bottom-cta p { color:#bec2c4; margin:0; line-height:1.5; font-size:14px; }
+    .site-footer { border-top:1px solid var(--line); padding:25px 0 35px; }
+    .footer-row { display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .footer-note { max-width:780px; color:#7f8587; font-size:11px; line-height:1.55; }
+    .mobile-sticky { display:none; }
+    #privacy { scroll-margin-top:25px; }
+    #apply { scroll-margin-top:16px; }
+    @media(max-width:1080px) { .nav-links { display:none; } .hero-grid { grid-template-columns:minmax(0,1fr) 385px; gap:27px; } .hero h1 { font-size:58px; } .benefits { gap:7px; } .benefit { font-size:11px; } }
+    @media(max-width:810px) { .hero-grid { grid-template-columns:1fr; gap:22px; padding-top:37px; } .hero h1 { max-width:690px; font-size:clamp(44px,7.4vw,60px); margin:16px 0; } .hero-intro { max-width:690px; } .hero-copy { display:contents; } .hero .eyebrow,.hero h1,.hero-intro,.benefits { grid-column:1; } .hero .eyebrow { grid-row:1; } .hero h1 { grid-row:2; } .hero-intro { grid-row:4; } .benefits { grid-row:5; } .lead-card { grid-column:1; grid-row:3; max-width:600px; width:100%; margin:0 auto; } .car-illustration { grid-column:1; grid-row:6; margin:0 auto -40px; width:100%; max-width:600px; } .car-note { grid-column:1; grid-row:7; margin:0 0 0 20px; } .hero:before { left:40%; top:450px; } .cards-3 { grid-template-columns:1fr; } .scenario-card { min-height:unset; padding:22px; } .scenario-card h3 { margin-top:12px; } .calculator-card { grid-template-columns:1fr; gap:20px; } .steps { grid-template-columns:repeat(2,1fr); } }
+    @media(max-width:560px) { .container { width:min(calc(100% - 30px),var(--container)); } .header-row { min-height:62px; } .logo { font-size:26px; } .logo small { display:none; } .logo-mark { width:30px; height:30px; } .header-cta { padding:10px 13px; margin-left:auto; font-size:12px; } .hero-grid { padding-top:27px; padding-bottom:30px; gap:12px; } .hero .eyebrow { font-size:10px; } .hero h1 { font-size:43px; margin:12px 0 6px; line-height:1.045; } .hero-intro { font-size:14px; line-height:1.52; } .benefits { margin:9px 0 6px; gap:6px; } .benefit { font-size:10px; padding:7px 9px; } .lead-card { padding:21px 18px; border-radius:19px; margin-top:1px; } .lead-card h2 { font-size:23px; margin:5px 0 6px; } .lead-card p.sub { font-size:12px; margin-bottom:13px; } .form-grid { gap:10px; } .field input,.field select { min-height:45px; padding:10px 12px; } .lead-card .btn-primary { min-height:48px; font-size:14px; } .checkbox-row label { font-size:10px; } .car-illustration { margin:2px 0 -29px; } .car-note { font-size:10px; margin:0; } section.content-section { padding:56px 0; } .section-heading { display:block; margin-bottom:23px; } .section-heading h2 { font-size:32px; } .section-heading p { font-size:13px; margin-top:13px; } .calculator-card { padding:18px; } .calc-fields { gap:10px; } .calc-result { padding:22px; } .steps { gap:10px; } .step { padding:19px; } .step h3 { font-size:16px; } .bottom-cta { padding:25px 23px; display:block; } .bottom-cta .btn { width:100%; margin-top:19px; } .footer-row { display:block; } .mobile-sticky { display:flex; position:fixed; bottom:0; left:0; width:100%; z-index:10; padding:10px 15px max(10px,env(safe-area-inset-bottom)); background:rgba(255,255,255,.95); backdrop-filter:blur(14px); border-top:1px solid #eaebe8; opacity:0; transform:translateY(120%); pointer-events:none; transition:opacity .2s,transform .2s; } .mobile-sticky.visible { opacity:1; transform:none; pointer-events:auto; } .mobile-sticky .btn { width:100%; min-height:48px; } .site-footer { padding-bottom:90px; } }
+    @media(prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} *,*::before,*::after{transition:none!important;} }
+  </style>
+  <script src="./config.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="logo" href="#top" aria-label="На начало страницы"><span class="logo-mark" aria-hidden="true"></span>атом <small>для работы в такси</small></a>
+      <nav class="nav-links" aria-label="Разделы страницы">
+        <a href="#for-whom">Для кого</a><a href="#calculator">Калькулятор</a><a href="#how-to">Как купить</a><a href="#faq">Вопросы</a>
+      </nav>
+      <a class="header-cta" href="#apply">Получить предложение</a>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Для водителей такси, ИП и самозанятых</span>
+          <h1 id="hero-title">Свой <em>АТОМ</em> для работы в такси</h1>
+          <p class="hero-intro">Покупайте автомобиль в собственность. Узнайте условия покупки и рассчитайте расходы для своей работы в такси.</p>
+          <div class="benefits" aria-label="Особенности предложения">
+            <span class="benefit"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="m4 12 5 5L20 6"/></svg>Собственный автомобиль</span>
+            <span class="benefit"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="m4 12 5 5L20 6"/></svg>Прямое или парковое подключение</span>
+            <span class="benefit"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="m4 12 5 5L20 6"/></svg>Персональные условия</span>
+          </div>
+          <div class="car-illustration" aria-hidden="true">
+            <svg viewBox="0 0 670 295" role="img" aria-label="Стилизованная иллюстрация электромобиля">
+              <defs>
+                <linearGradient id="paint" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e5e5df"/><stop offset=".48" stop-color="#a4a9a9"/><stop offset="1" stop-color="#65696c"/></linearGradient>
+                <linearGradient id="glass" x1="0" y1="0" x2="1" y2=".8"><stop stop-color="#78848a"/><stop offset="1" stop-color="#272f36"/></linearGradient>
+              </defs>
+              <ellipse cx="338" cy="249" rx="283" ry="20" fill="#302c2b" opacity=".11"/>
+              <path d="M72 201 Q77 188 108 184 L161 170 218 96 Q233 81 272 76 L427 72 Q465 71 487 90 L549 155 598 173 Q623 179 625 196 L626 221 Q625 235 607 237 L94 237 Q74 233 72 216 Z" fill="url(#paint)" stroke="#777e80" stroke-width="2"/>
+              <path d="M228 102 Q244 90 275 87 L414 84 Q453 85 470 100 L524 158 173 160 Z" fill="url(#glass)" stroke="#434d53" stroke-width="4"/>
+              <path d="M339 87 342 160 M471 103 527 160" stroke="#252c31" stroke-width="7"/>
+              <path d="M165 169 542 167" stroke="#f2f2ef" opacity=".8" stroke-width="4"/>
+              <path d="M90 196 Q95 190 121 189 L143 191 141 203 91 208 Z" fill="#f3e6ce"/>
+              <path d="M559 180 606 189 609 201 559 196 Z" fill="#ef6b3c"/>
+              <rect x="269" y="175" width="43" height="5" rx="2.5" fill="#4d5355"/>
+              <rect x="426" y="173" width="40" height="5" rx="2.5" fill="#4d5355"/>
+              <path d="M74 219 H624" stroke="#4c5051" stroke-width="9"/>
+              <g><circle cx="187" cy="229" r="41" fill="#1d2327"/><circle cx="187" cy="229" r="27" fill="#c6c8c9"/><circle cx="187" cy="229" r="16" fill="#4e565b"/><circle cx="187" cy="229" r="5" fill="#c6c8c9"/></g>
+              <g><circle cx="524" cy="229" r="41" fill="#1d2327"/><circle cx="524" cy="229" r="27" fill="#c6c8c9"/><circle cx="524" cy="229" r="16" fill="#4e565b"/><circle cx="524" cy="229" r="5" fill="#c6c8c9"/></g>
+              <path d="M72 216 Q66 225 83 232 L145 233 M567 233 615 231 Q630 229 626 216" fill="none" stroke="#969d9f" stroke-width="4"/>
+            </svg>
+          </div>
+          <p class="car-note">Иллюстрация условная. В финальной версии заменяется официальной фотографией АТОМа.</p>
+        </div>
+        <aside class="lead-card" id="apply" aria-labelledby="apply-title">
+          <div class="lead-card-kicker">Без обязательств</div>
+          <h2 id="apply-title">Узнайте условия покупки</h2>
+          <p class="sub">Оставьте телефон и город. Менеджер подготовит персональное предложение.</p>
+          <form id="lead-form" class="form-grid" novalidate>
+            <div class="field"><label for="lead-phone">Ваш телефон <span>*</span></label><input id="lead-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (999) 123-45-67" required maxlength="22" aria-describedby="phone-help"><span class="sr-only" id="phone-help">Номер в российском формате, 10 цифр после кода страны</span></div>
+            <div class="field"><label for="lead-city">Город работы <span>*</span></label><input id="lead-city" name="city" type="text" autocomplete="address-level2" placeholder="Например, Москва" minlength="2" maxlength="80" required></div>
+            <div class="checkbox-row"><input type="checkbox" id="lead-consent" name="consent_pd" required><label for="lead-consent">Согласен на обработку персональных данных для ответа на заявку. <a href="#privacy">Подробнее</a> <span aria-hidden="true">*</span></label></div>
+            <details class="optional-details"><summary>Дополнительные сведения (необязательно)</summary>
+              <div class="field"><label for="lead-status">Как вы работаете?</label><select id="lead-status" name="driver_status"><option value="not_selected">Можно не указывать</option><option value="self_employed">Самозанятый</option><option value="individual_entrepreneur">ИП</option><option value="not_registered">Пока не оформлен</option></select></div>
+              <div class="checkbox-row"><input type="checkbox" id="lead-marketing" name="consent_marketing"><label for="lead-marketing">Согласен получать рекламные предложения (необязательно)</label></div>
+            </details>
+            <button class="btn btn-primary" id="submit-btn" type="submit">Получить предложение <span aria-hidden="true">→</span></button>
+            <p id="form-status" class="form-status" role="status" aria-live="polite" hidden></p>
+            <p class="form-fine">* Обязательные поля. Условия подтверждает менеджер.</p>
+          </form>
+        </aside>
+      </div>
+    </section>
+    <section class="content-section" id="for-whom">
+      <div class="container">
+        <div class="section-heading"><div><span class="eyebrow">Начните с вашей ситуации</span><h2>Для тех, кто за рулём каждый день</h2></div><p>Неважно, подключены вы к заказам напрямую или через таксопарк: заявку на покупку автомобиля можно оставить в любом случае.</p></div>
+        <div class="cards-3">
+          <article class="scenario-card" data-scenario="rent"><span class="num">01 / Аренда</span><h3>Арендую автомобиль</h3><p>Хочу сравнить регулярные платежи за аренду с покупкой собственной машины.</p><button type="button" data-scenario-button="rent" data-target="#calculator">Сравнить расходы →</button></article>
+          <article class="scenario-card" data-scenario="own"><span class="num">02 / Свой автомобиль</span><h3>Работаю на своей машине</h3><p>Хочу оценить, сколько стоит пробег на бензине и электричестве.</p><button type="button" data-scenario-button="own" data-target="#calculator">Рассчитать расходы →</button></article>
+          <article class="scenario-card" data-scenario="plan"><span class="num">03 / Планирую</span><h3>Хочу начать работать</h3><p>Узнаю, как приобрести АТОМ в собственность и какие нужны документы.</p><button type="button" data-scenario-button="plan" data-target="#apply">Узнать условия →</button></article>
+        </div>
+      </div>
+    </section>
+    <section class="content-section calculator-section" id="calculator">
+      <div class="container">
+        <div class="section-heading"><div><span class="eyebrow">Простой расчёт</span><h2>Расходы на энергию: бензин или электричество?</h2></div><p>Измените цифры под свой пробег. Сравнивается только энергия, без учёта покупки, кредита, страховки, ТО и зарядных потерь.</p></div>
+        <div class="calculator-card">
+          <div class="calc-fields">
+            <div class="field"><label for="km">Пробег в месяц, км</label><input id="km" type="number" min="0" max="30000" step="100" value="5000"></div>
+            <div class="field"><label for="fuel-price">Бензин, ₽/л</label><input id="fuel-price" type="number" min="0" max="500" step="1" value="65"></div>
+            <div class="field"><label for="fuel-rate">Расход бензина, л/100 км</label><input id="fuel-rate" type="number" min="0" max="50" step=".5" value="9"></div>
+            <div class="field"><label for="power-price">Электроэнергия, ₽/кВт·ч</label><input id="power-price" type="number" min="0" max="150" step=".5" value="12"></div>
+            <div class="field"><label for="power-rate">Расход электроэнергии, кВт·ч/100 км</label><input id="power-rate" type="number" min="0" max="80" step=".5" value="19"></div>
+            <div class="field"><label for="power-loss">Потери при зарядке, %</label><input id="power-loss" type="number" min="0" max="60" step="1" value="12"></div>
+          </div>
+          <div class="calc-result"><div><div class="overline">Разница расходов на энергию в месяц</div><div class="calc-value" id="calc-diff">—</div><div class="calc-caption" id="calc-interpretation">Введите свой пробег и тарифы.</div></div><div><div class="overline">Бензин: <strong id="calc-petrol">—</strong></div><div class="overline" style="margin-top:8px">Электричество: <strong id="calc-electric">—</strong></div><p class="calc-note">Условные начальные значения — не официальный расчёт стоимости эксплуатации АТОМа и не гарантия экономии.</p><button type="button" class="btn btn-primary" style="margin-top:15px" id="calc-cta">Запросить расчёт покупки →</button></div></div>
+        </div>
+      </div>
+    </section>
+    <section class="content-section" id="how-to">
+      <div class="container"><div class="section-heading"><div><span class="eyebrow">Понятный путь</span><h2>Как купить собственный АТОМ</h2></div></div><div class="steps"><article class="step"><b>01</b><h3>Оставьте заявку</h3><p>Телефон и город достаточно, чтобы начать разговор.</p></article><article class="step"><b>02</b><h3>Обсудите условия</h3><p>Уточните цену, наличие и доступные способы оплаты.</p></article><article class="step"><b>03</b><h3>Выберите вариант</h3><p>Покупка за собственные средства или подходящее финансирование.</p></article><article class="step"><b>04</b><h3>Оформите покупку</h3><p>Согласуйте договор, оплату и порядок передачи автомобиля.</p></article></div></div>
+    </section>
+    <section class="content-section" id="faq" style="padding-top:10px">
+      <div class="container"><div class="section-heading"><div><span class="eyebrow">Частые вопросы</span><h2>Что важно знать водителю</h2></div></div><div class="faq">
+        <details><summary>Я самозанятый. Могу обратиться за покупкой?</summary><p>Да. Оставить заявку на покупку собственного автомобиля можно независимо от того, работаете ли вы напрямую или через таксопарк. Доступность конкретных программ финансирования нужно уточнять индивидуально.</p></details>
+        <details><summary>Я подключён через таксопарк. Нужно переходить на прямое подключение?</summary><p>Покупка собственного автомобиля и способ подключения к агрегатору — разные вопросы. Переход на прямое подключение сам по себе не является условием подачи заявки на автомобиль.</p></details>
+        <details><summary>После покупки АТОМа можно сразу принимать заказы?</summary><p>Для работы в легковом такси необходимо выполнить действующие требования к перевозчику, автомобилю и водителю. Соответствие автомобиля требованиям конкретных тарифов и агрегаторов нужно уточнять отдельно.</p></details>
+        <details><summary>Как узнать точную стоимость и ежемесячный платёж?</summary><p>Оставьте заявку. Менеджер уточнит актуальную стоимость автомобиля и доступные на дату обращения варианты оплаты. Калькулятор выше сравнивает только расходы на энергию.</p></details>
+      </div></div>
+    </section>
+    <section class="content-section" style="padding-top:30px"><div class="container"><div class="bottom-cta"><div><h2>Свой автомобиль. Свои условия.</h2><p>Оставьте контакты и получите индивидуальную консультацию о покупке.</p></div><a class="btn btn-primary" href="#apply">Получить предложение →</a></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-row"><div class="logo" aria-label="АТОМ"><span class="logo-mark" aria-hidden="true"></span>атом</div><div class="footer-note" id="privacy">Демонстрационная версия лендинга. Не является публичной офертой. До начала реального сбора заявок необходимо подключить защищённый российский сервер приёма, опубликовать утверждённую политику обработки персональных данных и указать оператора персональных данных. Маркетинговое согласие не требуется для отправки заявки.</div></div></footer>
+  <div class="mobile-sticky" id="mobile-sticky"><a class="btn btn-primary" href="#apply">Получить предложение →</a></div>
+  <script>
+    (() => {
+      'use strict';
+      const form = document.getElementById('lead-form');
+      const status = document.getElementById('form-status');
+      const submitButton = document.getElementById('submit-btn');
+      const source = new URLSearchParams(window.location.search);
+      let scenario = 'not_selected';
+      let started = false;
+      const track = (event, extra={}) => { try { window.dataLayer = window.dataLayer || []; window.dataLayer.push({event,...extra}); } catch(e) {} };
+      const showStatus = (message, state='error') => { status.hidden=false; status.dataset.state=state; status.textContent=message; };
+      const toNumber = id => {const n=Number(document.getElementById(id).value); return Number.isFinite(n)&&n>=0?n:0;};
+      const money = n => Math.round(n).toLocaleString('ru-RU') + ' ₽';
+      const calc = () => {
+        const km=toNumber('km'),fuel=km/100*toNumber('fuel-rate')*toNumber('fuel-price');
+        const electricity=km/100*toNumber('power-rate')*toNumber('power-price')*(1+toNumber('power-loss')/100);
+        const diff=fuel-electricity;
+        document.getElementById('calc-petrol').textContent=money(fuel);
+        document.getElementById('calc-electric').textContent=money(electricity);
+        document.getElementById('calc-diff').textContent=money(Math.abs(diff));
+        document.getElementById('calc-interpretation').textContent=diff>0?'При выбранных параметрах электричество дешевле.':diff<0?'При выбранных параметрах бензин дешевле.':'При выбранных параметрах расходы одинаковы.';
+      };
+      ['km','fuel-price','fuel-rate','power-price','power-rate','power-loss'].forEach(id => document.getElementById(id).addEventListener('input',calc));
+      calc();
+      const goApply = () => {document.getElementById('apply').scrollIntoView({behavior:'smooth',block:'start'});};
+      document.getElementById('calc-cta').addEventListener('click',()=>{track('calculator_cta');goApply();});
+      document.querySelectorAll('[data-scenario-button]').forEach(btn=>btn.addEventListener('click',()=>{
+        scenario=btn.dataset.scenarioButton;
+        document.querySelectorAll('.scenario-card').forEach(card=>card.classList.toggle('active',card.dataset.scenario===scenario));
+        track('scenario_select',{scenario});
+        document.querySelector(btn.dataset.target).scrollIntoView({behavior:'smooth',block:'start'});
+      }));
+      form.addEventListener('input',()=>{ if(!started){track('lead_form_start',{form_id:'hero'});started=true;} });
+      form.addEventListener('submit',async e=>{
+        e.preventDefault();
+        status.hidden=true;
+        const phoneRaw=document.getElementById('lead-phone').value.trim();
+        const digits=phoneRaw.replace(/\D/g,'');
+        const normalized=digits.length===11&&digits[0]==='8'?'7'+digits.slice(1):digits.length===10?'7'+digits:digits;
+        const city=document.getElementById('lead-city').value.trim();
+        const consent=document.getElementById('lead-consent').checked;
+        if(!/^7\d{10}$/.test(normalized)){showStatus('Проверьте номер телефона: укажите 10 цифр после +7.');document.getElementById('lead-phone').focus();return;}
+        if(city.length<2){showStatus('Укажите город работы.');document.getElementById('lead-city').focus();return;}
+        if(!consent){showStatus('Для отправки заявки необходимо согласие на обработку данных.');document.getElementById('lead-consent').focus();return;}
+        const config=window.ATOM_CONFIG||{};
+        if(!config.leadEndpoint){showStatus('Демо-версия: приём заявок ещё не подключён. Контактные данные никуда не отправлены.');track('lead_submit_unconfigured',{form_id:'hero'});return;}
+        const payload={phone:'+'+normalized,city,driver_status:document.getElementById('lead-status').value,consent_pd:true,consent_marketing:document.getElementById('lead-marketing').checked,scenario,lead_source:'atom_taxi_owner_landing',page_url:window.location.href,submitted_at:new Date().toISOString(),utm_source:source.get('utm_source')||'',utm_medium:source.get('utm_medium')||'',utm_campaign:source.get('utm_campaign')||'',utm_content:source.get('utm_content')||'',utm_term:source.get('utm_term')||''};
+        submitButton.disabled=true;submitButton.textContent='Отправляем…';
+        try {
+          const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),15000);
+          let response;
+          try {response=await fetch(config.leadEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),signal:controller.signal,credentials:'omit'});} finally{clearTimeout(timeout);}
+          if(!response.ok)throw new Error('HTTP '+response.status);
+          showStatus('Заявка отправлена. Мы свяжемся с вами после обработки обращения.','success');
+          track('generate_lead',{form_id:'hero',scenario});form.reset();started=false;
+        } catch(err){showStatus('Не удалось отправить заявку. Проверьте подключение и попробуйте ещё раз.');track('lead_submit_error',{form_id:'hero'});}
+        finally{submitButton.disabled=false;submitButton.innerHTML='Получить предложение <span aria-hidden="true">→</span>';}
+      });
+      const sticky=document.getElementById('mobile-sticky');
+      if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{sticky.classList.toggle('visible',!entries[0].isIntersecting);},{threshold:0});observer.observe(document.getElementById('apply'));}
+      document.querySelectorAll('.faq details').forEach((el,i)=>el.addEventListener('toggle',()=>{if(el.open)track('faq_open',{faq_index:i+1});}));
+    })();
+  </script>
+</body>
+</html>
